@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Seguro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+       <style>
+    body {
+        background-image: url('Iconos e imagenes/tema_tapiz.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="Iconos e imagenes\logo_splash.png" alt="Logo" style="width: 65px; height: 80px; margin-right: 35px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Lista de navegación alineada a la derecha -->
+                <ul class="navbar-nav justify-content-end ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html" style="font-weight: bold">‎ ‎ ‎
+                            Inicio‎ ‎ ‎ </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="configuracion-redes.html" style="font-weight: bold">‎ ‎ ‎
+                            Configuración de redes‎ ‎ ‎ </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#Riesgos" style="font-weight: bold">‎ ‎ ‎ Información de
+                            riesgo‎ ‎ ‎ </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#Ruta-denuncia" style="font-weight: bold">‎ ‎ ‎ Ruta de
+                            denuncia‎ ‎ ‎ </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuestionario.html" style="font-weight: bold">‎ ‎ ‎ Autoevaluación‎ ‎ ‎
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-custom" href="#" style="font-weight: bold">‎ ‎ ‎ Mi Cuenta‎ ‎ ‎ </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Primer formulario de pregunta -->
+        <div id="question1" class="question-container">
+            <h2 class="titulo5">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>Le cuento a mis amistades y/o seguidores en redes socialeso videojuegos<br>
+                sobre mis gustos (música, animes, lugares, comida, ropa, etc.)</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(2, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(2, 'No')">No</button>
+            </div>
+
+            <div class="mt-5"></div>
+        </div>
+
+        <!-- Segundo formulario de pregunta -->
+        <div id="question2" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>Comparto mi ubicación, teléfono, dirección de mi cada o el nombre del <br> colegio donde estudio en mis redes sociales</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(3, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(3, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+
+        <!-- Tercera pregunta -->
+        <div id="question3" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>Cuento mis problemas en las redes sociales.</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(4, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(4, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- Cuarta pregunta -->
+        <div id="question4" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>La cámara web de mi computadora siempre está conectada.</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(5, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(5, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- Quinta pregunta -->
+        <div id="question5" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
+            <h4><br>Acepto como "amiga o amigo" en redes sociales a cualquiera<br>
+                que lo solicita</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(6, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(6, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- Sexta pregunta -->
+        <div id="question6" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>Reconozco perfil falsos en las redes sociales.</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(7, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(7, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- Setima pregunta -->
+        <div id="question7" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>Me gusta que mis amigas/os me digan cosas bonitas cuando<br>
+                publico fotos o reels en mis redes sociales.</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(8, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(8, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- Octava pregunta -->
+        <div id="question8" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>Me gusta subir fotos o videos a mis redes sociales.</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(9, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(9, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- Novena pregunta -->
+        <div id="question9" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>Tengo un smartphone que uso todos los días.</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(10, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(10, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- Decima pregunta -->
+        <div id="question10" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>Alguna vez me he sentido incómodo/a con Información que he vsito en internet.</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(11, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(11, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- Undecima pregunta -->
+        <div id="question11" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
+            <h4><br>¿Podria grabar videos íntimos o eróticos con mi enamorada o <br>
+                algún amigo de confianza?</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(12, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(12, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- Duodecima pregunta -->
+        <div id="question12" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>¿Alguna vez me han propuesto grabarme videos o tomarme fotos<br>
+                íntimas?</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(13, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(13, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- decimotercera pregunta -->
+        <div id="question13" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>¿Me gusta compartir videos, mensajes o fotos íntimas?</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(14, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(14, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- decimoCuarta pregunta -->
+        <div id="question14" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
+            <h4><br>¿Alguna vez me he reunido presencialmente con alguien<br>
+                que conocí virtualmente?</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(15, 'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(15, 'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- decimoQuinta pregunta -->
+        <div id="question15" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
+            <h4><br>¿He compartido las claves de mis redes sociales con mi<br> enamorada (o) o con un amigo?</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(16,'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(16,'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+        <!-- decimoSextapregunta -->
+        <div id="question16" class="question-container" style="display: none;">
+            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br>¿He compartido las claves de mis redes sociales con mi<br> enamorada (o) o con un amigo?</h4>
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="nextQuestion(16,'Sí')">Sí</button>
+                <button class="btn btn-secondary" onclick="nextQuestion(16,'No')">No</button>
+            </div>
+            <div class="mt-5"></div>
+        </div>
+
+        <!-- Pantalla de overlay de color -->
+        <div id="overlay" class="overlay" style="display: none;">
+            <div id="overlayMessage" class="overlay-message">
+                <h2>Tu resultado es:</h2>
+                <img id="riskImage" src="" alt="Nivel de riesgo" style="max-width: 50%; height: auto;" />
+                <h3 id="riskLevel">Riesgo Alto</h3>
+                <p id="riskMessage">Tu situación presenta un alto riesgo. Has recibido mensajes inapropiados o
+                    manipulativos que podrían ser un intento de grooming. Te recomendamos pedir ayuda y responder el
+                    cuestionario adicional.</p>
+                <button class="btn btn-success finalize-btn" onclick="endSurvey()">Finalizar</button>
+                <a href="index.html#Ruta-denuncia" class="btn btn-success finalize-btn">Pedir Ayuda</a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-teal texto1-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li><a href="configuracion-redes.html" class="texto1-light">Configuración</a></li>
+                        <li><a href="index.html#Riesgos" class="texto1-light">Información de riesgo</a></li>
+                        <li><a href="index.html#Ruta-denuncia" class="texto1-light">Ruta de denuncia</a></li>
+                        <li><a href="cuestionario.html" class="texto1-light">Autoevaluación</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-section-title">ACCIONES</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="texto1-light">Hacer una denuncia</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-section-title">POLÍTICAS</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="texto1-light">Términos y Condiciones</a></li>
+                        <li><a href="#" class="texto1-light">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 texto1-center">
+                    <div class="social-icons">
+                        <a href="#" class="texto1-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="texto1-light me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="texto1-light me-3"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="texto1-light me-3"><i class="bi bi-instagram"></i></a>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="Iconos e imagenes\logo-default-000.png" alt="CHS Alternativo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="JAVASCRIPT/cuestionario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

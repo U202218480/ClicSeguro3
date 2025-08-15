@@ -1,0 +1,304 @@
+
+.navbar-custom {
+            background-color: #91c7ce; /* Color turquesa */
+        }
+.btn{
+            background-color: #67acd7;
+            border-color:#67acd7 ;
+        }
+
+.Container1{
+            background-color: #FF7043;
+        }
+.Container2{
+            background-color: #007e89;
+        }
+        .Container3{
+            background-color: #91c7ce;
+        }
+
+.navbar-custom .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: justify;
+            direction: rtl;
+            color: #91c7ce;
+        }
+.navbar-custom .nav-link {
+            color: black !important; /* Color negro para las opciones */
+        }
+.navbar-custom .nav-link:hover {
+            color: #007e89 !important; /* Color blanco al pasar el mouse */
+        }
+        .navbar-custom .navbar-toggler-icon {
+            background-color: #91c7ce; /* Color de icono del navbar en móviles */
+        }
+        .navbar-custom .btn-custom {
+            background-color: #00757E; /* Botón verde */
+            color: white;
+        }
+        .navbar-custom .btn-custom:hover {
+            background-color: #00757E; /* Botón verde oscuro al pasar el mouse */
+        }
+        .image-container{
+            width: 450px;
+        }
+        .titulo1{
+            text-align: center;
+            Color: #a360c5;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400; /* 400 = Regular */
+        }
+        .titulo2{
+            text-align: center;
+            Color: #007e89;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400; /* 400 = Regular */
+        }
+        .titulo3{
+            text-align: center;
+            Color: #007e89;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400; /* 400 = Regular */
+        }
+        .titulo4{
+            text-align: center;
+            Color: #FF7043;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400; /* 400 = Regular */
+        }
+        .titulo5{
+            text-align: center;
+            Color: #4FC3F7;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600; /* 400 = Regular */
+        }
+        
+
+        .texto1{
+            Color: #000000;
+            font-family: 'Poppins', sans-serif;
+        }
+        .texto2{
+            Color: #a360c5;
+            font-family: 'Poppins', sans-serif;
+        }
+        .important-section {
+
+            padding: 20px;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #91c7ce;
+            padding: 40px 0;
+        }
+        footer ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        footer ul li {
+            margin: 10px 0;
+        }
+        footer ul li a {
+            color: Black;
+            text-decoration: none;
+        }
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+        .footer-section-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        .social-icons a:hover {
+            color: #00B8C0;
+        }
+        .footer-logo img {
+            width: 250px;
+        }
+        @media (max-width: 768px) {
+            footer .row {
+                text-align: center;
+                color: #00B8C0;
+            }
+            footer .social-icons {
+                margin-top: 20px;
+            }
+            footer .footer-logo {
+                margin-top: 20px;
+            }
+        }
+        .social-icon {
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
+        }
+        .social-card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .social-card p {
+            flex: 1;
+        }
+        /* Target the accordion button when it's expanded */
+    .accordion-button:not(.collapsed) {
+        background-color: #007e89; 
+        color: white;
+    }
+
+    /* Optional: Add a different background color for collapsed accordion button */
+    .accordion-button.collapsed {
+        background-color: #f8f9fa;
+    }
+
+.carousel-control-prev-icon{
+    background-color: #007e89;
+}
+.carousel-control-next-icon{
+    background-color: #007e89;
+}
+/**/
+/* Cambiar el color del borde de las tarjetas */
+.card {
+    border: 2px solid #daebed;
+}
+
+
+
+/* Cambiar el color de los títulos dentro de las tarjetas */
+.card-title {
+    color: #00B8C0;
+}
+
+
+/* Espaciado y alineación de las preguntas */
+.question-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+/* Estilo para imágenes */
+.img-fluid {
+    max-width: 200px;
+    height: auto;
+}
+
+
+
+/* Espaciado y alineación de las preguntas */
+.question-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Estilo de los botones */
+.btn-primary {
+    background-color: #4FC3F7;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #42a5d2;
+}
+
+.btn-secondary {
+    background-color: #e2160f;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #a30d08;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.image-container {
+    max-width: 100%; /* Asegura que el contenedor no se desborde */
+    overflow: hidden; /* Evita que cualquier cosa se desborde si la imagen es demasiado grande */
+    text-align: center; /* Alinea la imagen al centro si es necesario */
+}
+
+.img-fluid {
+    max-width: 100%; /* Garantiza que la imagen no se desborde fuera de su contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+/* Espacio adicional después de los botones y antes del footer */
+.question-container .mt-5 {
+    margin-top: 50px;
+}
+
+/*SI Y NO*/
+/* Overlay de color */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);  /* Fondo oscuro */
+    display: none; /* Inicialmente oculto */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999; /* Asegura que esté encima de otros elementos */
+}
+
+/* Contenido dentro del overlay */
+.overlay-message {
+    background-color: #fff;  /* Fondo blanco para el mensaje */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 80%;
+    color: #333; /* Color del texto */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Botón de Finalizar */
+.finalize-btn {
+    background-color: #4FC3F7; /* Color verde */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.finalize-btn:hover {
+    background-color: #4FC3F7; /* Cambia de color al pasar el cursor */
+}
+
+/* Rojo */
+.red-overlay .overlay-message {
+    background-color: #ff4d4d;  /* Fondo rojo */
+    color: white;
+}
+
+/* Amarillo */
+.yellow-overlay .overlay-message {
+    background-color: #ffcc00;  /* Fondo amarillo */
+    color: white;
+}
+
+/* Verde */
+.green-overlay .overlay-message {
+    background-color: #4CAF50;  /* Fondo verde */
+    color: white;
+}
