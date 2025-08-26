@@ -36,27 +36,37 @@
                 <!-- Lista de navegación alineada a la derecha -->
                 <ul class="navbar-nav justify-content-end ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html" style="font-weight: bold">‎ ‎ ‎
+                        <a class="nav-link active texto" aria-current="page" href="index.html" style="font-weight: bold">‎ ‎ ‎
                             Inicio‎ ‎ ‎ </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="configuracion-redes.html" style="font-weight: bold">‎ ‎ ‎
+                        <a class="nav-link texto" href="configuracion-redes.html" style="font-weight: bold" data-es="Configuración de Redes" data-tic="Meã ü̃āchixüca̲x i redes socialgü" data-kuk="" data-mat="Utsin isnushe quesnum nanacte" data-mur="Mare lloiji">‎ ‎ ‎
                             Configuración de redes‎ ‎ ‎ </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#Riesgos" style="font-weight: bold">‎ ‎ ‎ Información de
+                        <a class="nav-link texto" href="index.html#Riesgos" style="font-weight: bold" data-es="Información de riesgo" data-tic="Auncümaxü i línea nüxü̃ cu cuxaxü̃" data-kuk="" data-mat="Minbi isambo icquid tantiate" data-mur="Riesgos en atona que debe conocer">‎ ‎ ‎ Información de
                             riesgo‎ ‎ ‎ </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#Ruta-denuncia" style="font-weight: bold">‎ ‎ ‎ Ruta de
+                        <a class="nav-link texto" href="index.html#Ruta-denuncia" style="font-weight: bold" data-es="Ruta de denuncia" data-tic="Ruta uwan arü" data-kuk="" data-mat="Chuiuido bëtan adquid denunciauaquin" data-mur="Naɨ de llogɨdua">‎ ‎ ‎ Ruta de
                             denuncia‎ ‎ ‎ </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cuestionario.html" style="font-weight: bold">‎ ‎ ‎ Autoevaluación‎ ‎ ‎
+                        <a class="nav-link texto" href="cuestionario.html" style="font-weight: bold" data-es="Autoevaluación" data-tic="yigütana i ngugüxü" data-kuk="" data-mat="Midapaden nau" data-mur="">‎ ‎ ‎ Autoevaluación‎ ‎ ‎
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-custom" href="#" style="font-weight: bold">‎ ‎ ‎ Mi Cuenta‎ ‎ ‎ </a>
+                        <a class="btn btn-custom texto" href="#" style="font-weight: bold">‎ ‎ ‎ Mi Cuenta‎ ‎ ‎ </a>
+                    </li>
+                    <!-- Selector de idioma con margen a la izquierda -->
+                    <li class="nav-item ms-3">
+                        <select id="selectorIdioma" class="form-select w-auto" onchange="cambiarIdioma(this.value)">
+                            <option value="es" selected>Español</option>
+                            <option value="tic">Ticuna</option>
+                            <option value="kuk">Kukama</option>
+                            <option value="mat">Matsés</option>
+                            <option value="mur">Murui Buee</option>
+                        </select>
                     </li>
                 </ul>
             </div>
@@ -65,9 +75,9 @@
     <div class="container">
         <!-- Primer formulario de pregunta -->
         <div id="question1" class="question-container">
-            <h2 class="titulo5">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>Le cuento a mis amistades y/o seguidores en redes socialeso videojuegos<br>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Le cuento a mis amistades y/o seguidores en redes socialeso videojuegos<br>
                 sobre mis gustos (música, animes, lugares, comida, ropa, etc.)</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(2, 'Sí')">Sí</button>
@@ -79,9 +89,9 @@
 
         <!-- Segundo formulario de pregunta -->
         <div id="question2" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>Comparto mi ubicación, teléfono, dirección de mi cada o el nombre del <br> colegio donde estudio en mis redes sociales</h4>
+            <h4><b class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Comparto mi ubicación, teléfono, dirección de mi cada o el nombre del <br> colegio donde estudio en mis redes sociales</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(3, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(3, 'No')">No</button>
@@ -91,9 +101,9 @@
 
         <!-- Tercera pregunta -->
         <div id="question3" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>Cuento mis problemas en las redes sociales.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Cuento mis problemas en las redes sociales.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(4, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(4, 'No')">No</button>
@@ -102,9 +112,9 @@
         </div>
         <!-- Cuarta pregunta -->
         <div id="question4" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>La cámara web de mi computadora siempre está conectada.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">La cámara web de mi computadora siempre está conectada.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(5, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(5, 'No')">No</button>
@@ -113,9 +123,9 @@
         </div>
         <!-- Quinta pregunta -->
         <div id="question5" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
-            <h4><br>Acepto como "amiga o amigo" en redes sociales a cualquiera<br>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Acepto como "amiga o amigo" en redes sociales a cualquiera<br>
                 que lo solicita</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(6, 'Sí')">Sí</button>
@@ -125,9 +135,9 @@
         </div>
         <!-- Sexta pregunta -->
         <div id="question6" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>Reconozco perfil falsos en las redes sociales.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Reconozco perfil falsos en las redes sociales.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(7, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(7, 'No')">No</button>
@@ -136,9 +146,9 @@
         </div>
         <!-- Setima pregunta -->
         <div id="question7" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>Me gusta que mis amigas/os me digan cosas bonitas cuando<br>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Me gusta que mis amigas/os me digan cosas bonitas cuando<br>
                 publico fotos o reels en mis redes sociales.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(8, 'Sí')">Sí</button>
@@ -148,9 +158,9 @@
         </div>
         <!-- Octava pregunta -->
         <div id="question8" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>Me gusta subir fotos o videos a mis redes sociales.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Me gusta subir fotos o videos a mis redes sociales.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(9, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(9, 'No')">No</button>
@@ -159,9 +169,9 @@
         </div>
         <!-- Novena pregunta -->
         <div id="question9" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>Tengo un smartphone que uso todos los días.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Tengo un smartphone que uso todos los días.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(10, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(10, 'No')">No</button>
@@ -170,9 +180,9 @@
         </div>
         <!-- Decima pregunta -->
         <div id="question10" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>Alguna vez me he sentido incómodo/a con Información que he vsito en internet.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Alguna vez me he sentido incómodo/a con Información que he vsito en internet.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(11, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(11, 'No')">No</button>
@@ -181,9 +191,9 @@
         </div>
         <!-- Undecima pregunta -->
         <div id="question11" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
-            <h4><br>¿Podria grabar videos íntimos o eróticos con mi enamorada o <br>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Podria grabar videos íntimos o eróticos con mi enamorada o <br>
                 algún amigo de confianza?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(12, 'Sí')">Sí</button>
@@ -193,9 +203,9 @@
         </div>
         <!-- Duodecima pregunta -->
         <div id="question12" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>¿Alguna vez me han propuesto grabarme videos o tomarme fotos<br>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Alguna vez me han propuesto grabarme videos o tomarme fotos<br>
                 íntimas?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(13, 'Sí')">Sí</button>
@@ -205,9 +215,9 @@
         </div>
         <!-- decimotercera pregunta -->
         <div id="question13" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>¿Me gusta compartir videos, mensajes o fotos íntimas?</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Me gusta compartir videos, mensajes o fotos íntimas?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(14, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(14, 'No')">No</button>
@@ -216,9 +226,9 @@
         </div>
         <!-- decimoCuarta pregunta -->
         <div id="question14" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
-            <h4><br>¿Alguna vez me he reunido presencialmente con alguien<br>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Alguna vez me he reunido presencialmente con alguien<br>
                 que conocí virtualmente?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(15, 'Sí')">Sí</button>
@@ -228,9 +238,9 @@
         </div>
         <!-- decimoQuinta pregunta -->
         <div id="question15" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
-            <h4><br>¿He compartido las claves de mis redes sociales con mi<br> enamorada (o) o con un amigo?</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿He compartido las claves de mis redes sociales con mi<br> enamorada (o) o con un amigo?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(16,'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(16,'No')">No</button>
@@ -239,9 +249,9 @@
         </div>
         <!-- decimoSextapregunta -->
         <div id="question16" class="question-container" style="display: none;">
-            <h2 class="titulo5" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br>¿He compartido las claves de mis redes sociales con mi<br> enamorada (o) o con un amigo?</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿He compartido las claves de mis redes sociales con mi<br> enamorada (o) o con un amigo?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(16,'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(16,'No')">No</button>

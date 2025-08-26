@@ -95,3 +95,22 @@ function endSurvey() {
             console.error("No se encontró el elemento de audio con el ID:", audioId);
         }
     }
+
+    function cambiarIdioma(lang) {
+      const elementos = document.querySelectorAll('.texto');
+      elementos.forEach(el => {
+        if (el.getAttribute(`data-${lang}`)) {
+          el.textContent = el.getAttribute(`data-${lang}`);
+        }
+      });
+      localStorage.setItem("idioma", lang);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const idiomaGuardado = localStorage.getItem("idioma") || "es";
+      const selector = document.getElementById("selectorIdioma");
+      if (selector) {
+        selector.value = idiomaGuardado;
+      }
+      cambiarIdioma(idiomaGuardado);
+    });
