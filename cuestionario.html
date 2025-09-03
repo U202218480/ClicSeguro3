@@ -10,56 +10,72 @@
     <link rel="stylesheet" href="CSS/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-       <style>
-    body {
-        background-image: url('Iconos e imagenes/tema_tapiz.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-    }
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background-image: url('Iconos e imagenes/tema_tapiz.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="Iconos e imagenes\logo_splash.png" alt="Logo" style="width: 65px; height: 80px; margin-right: 35px;">
-            </a>
+
+            <!-- IZQUIERDA: Dos logos siempre visibles -->
+            <div class="d-flex align-items-center">
+                <img src="Iconos e imagenes/logo-default-000.png" alt="Logo 1" class="img-fluid me-2"
+                    style="max-height: 50px;">
+                <img src="Iconos e imagenes/logo_splash.png" alt="Logo 2" class="img-fluid me-3"
+                    style="max-height: 50px;">
+            </div>
+
+            <!-- Botón hamburguesa (móvil) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Lista de navegación alineada a la derecha -->
-                <ul class="navbar-nav justify-content-end ms-auto">
+
+            <!-- Contenido del navbar -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+
+                    <!-- Enlaces de navegación -->
                     <li class="nav-item">
-                        <a class="nav-link active texto" aria-current="page" href="index.html" style="font-weight: bold">‎ ‎ ‎
-                            Inicio‎ ‎ ‎ </a>
+                        <a class="nav-link active texto fw-bold" href="index.html" data-en="Home"
+                            data-es="Inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto" href="configuracion-redes.html" style="font-weight: bold" data-es="Configuración de Redes" data-tic="Meã ü̃āchixüca̲x i redes socialgü" data-kuk="" data-mat="Utsin isnushe quesnum nanacte" data-mur="Mare lloiji">‎ ‎ ‎
-                            Configuración de redes‎ ‎ ‎ </a>
+                        <a class="nav-link texto fw-bold" href="configuracion-redes.html" data-es="Configura tus redes"
+                            data-tic="Meã ü̃āchixüca̲x i redes socialgü" data-kuk=""
+                            data-mat="Utsin isnushe quesnum nanacte" data-mur="Mare lloiji">Configuración de redes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto" href="index.html#Riesgos" style="font-weight: bold" data-es="Información de riesgo" data-tic="Auncümaxü i línea nüxü̃ cu cuxaxü̃" data-kuk="" data-mat="Minbi isambo icquid tantiate" data-mur="Riesgos en atona que debe conocer">‎ ‎ ‎ Información de
-                            riesgo‎ ‎ ‎ </a>
+                        <a class="nav-link texto fw-bold" href="index.html#Riesgos" data-es="Aprende sobre riesgos"
+                            data-tic="Auncümaxü i línea nüxü̃ cu cuxaxü̃" data-kuk=""
+                            data-mat="Minbi isambo icquid tantiate"
+                            data-mur="Riesgos en atona que debe conocer">Información de riesgo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto" href="index.html#Ruta-denuncia" style="font-weight: bold" data-es="Ruta de denuncia" data-tic="Ruta uwan arü" data-kuk="" data-mat="Chuiuido bëtan adquid denunciauaquin" data-mur="Naɨ de llogɨdua">‎ ‎ ‎ Ruta de
-                            denuncia‎ ‎ ‎ </a>
+                        <a class="nav-link texto fw-bold" href="index.html#Ruta-denuncia" data-es="Ruta para denunciar"
+                            data-tic="Ruta uwan arü" data-kuk="" data-mat="Chuiuido bëtan adquid denunciauaquin"
+                            data-mur="Naɨ de llogɨdua">Ruta para denunciar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto" href="cuestionario.html" style="font-weight: bold" data-es="Autoevaluación" data-tic="yigütana i ngugüxü" data-kuk="" data-mat="Midapaden nau" data-mur="">‎ ‎ ‎ Autoevaluación‎ ‎ ‎
-                        </a>
+                        <a class="nav-link texto fw-bold" href="cuestionario.html" data-es="Autoevaluación"
+                            data-tic="yigütana i ngugüxü" data-kuk="" data-mat="Midapaden nau"
+                            data-mur="">Autoevaluación</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="btn btn-custom texto" href="#" style="font-weight: bold">‎ ‎ ‎ Mi Cuenta‎ ‎ ‎ </a>
-                    </li>
-                    <!-- Selector de idioma con margen a la izquierda -->
-                    <li class="nav-item ms-3">
+
+                    <!-- Selector de idioma con ícono -->
+                    <li class="nav-item ms-3 d-flex align-items-center">
+                        <i class="bi bi-globe text-white me-2 fs-5"></i>
                         <select id="selectorIdioma" class="form-select w-auto" onchange="cambiarIdioma(this.value)">
                             <option value="es" selected>Español</option>
                             <option value="tic">Ticuna</option>
@@ -68,16 +84,22 @@
                             <option value="mur">Murui Buee</option>
                         </select>
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
+    
     <div class="container">
+        <h4><br></h4>
+        <h4><br></h4>
         <!-- Primer formulario de pregunta -->
         <div id="question1" class="question-container">
-            <h2 class="titulo5 texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Responde a cada una de
+                las preguntas presionando en “Sí” o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Le cuento a mis amistades y/o seguidores en redes socialeso videojuegos<br>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Le cuento a mis amistades
+                y/o seguidores en redes socialeso videojuegos<br>
                 sobre mis gustos (música, animes, lugares, comida, ropa, etc.)</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(2, 'Sí')">Sí</button>
@@ -89,9 +111,11 @@
 
         <!-- Segundo formulario de pregunta -->
         <div id="question2" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><b class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Comparto mi ubicación, teléfono, dirección de mi cada o el nombre del <br> colegio donde estudio en mis redes sociales</h4>
+            <h4><b class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Comparto mi ubicación,
+                    teléfono, dirección de mi cada o el nombre del <br> colegio donde estudio en mis redes sociales</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(3, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(3, 'No')">No</button>
@@ -101,9 +125,11 @@
 
         <!-- Tercera pregunta -->
         <div id="question3" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Cuento mis problemas en las redes sociales.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Cuento mis problemas en las
+                redes sociales.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(4, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(4, 'No')">No</button>
@@ -112,9 +138,11 @@
         </div>
         <!-- Cuarta pregunta -->
         <div id="question4" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">La cámara web de mi computadora siempre está conectada.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">La cámara web de mi
+                computadora siempre está conectada.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(5, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(5, 'No')">No</button>
@@ -123,9 +151,11 @@
         </div>
         <!-- Quinta pregunta -->
         <div id="question5" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
-            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Acepto como "amiga o amigo" en redes sociales a cualquiera<br>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Acepto como "amiga o amigo"
+                en redes sociales a cualquiera<br>
                 que lo solicita</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(6, 'Sí')">Sí</button>
@@ -135,9 +165,11 @@
         </div>
         <!-- Sexta pregunta -->
         <div id="question6" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Reconozco perfil falsos en las redes sociales.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Reconozco perfil falsos en
+                las redes sociales.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(7, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(7, 'No')">No</button>
@@ -146,9 +178,11 @@
         </div>
         <!-- Setima pregunta -->
         <div id="question7" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Me gusta que mis amigas/os me digan cosas bonitas cuando<br>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Me gusta que mis amigas/os
+                me digan cosas bonitas cuando<br>
                 publico fotos o reels en mis redes sociales.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(8, 'Sí')">Sí</button>
@@ -158,9 +192,11 @@
         </div>
         <!-- Octava pregunta -->
         <div id="question8" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Me gusta subir fotos o videos a mis redes sociales.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Me gusta subir fotos o
+                videos a mis redes sociales.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(9, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(9, 'No')">No</button>
@@ -169,9 +205,11 @@
         </div>
         <!-- Novena pregunta -->
         <div id="question9" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Tengo un smartphone que uso todos los días.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Tengo un smartphone que uso
+                todos los días.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(10, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(10, 'No')">No</button>
@@ -180,9 +218,11 @@
         </div>
         <!-- Decima pregunta -->
         <div id="question10" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Alguna vez me he sentido incómodo/a con Información que he vsito en internet.</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">Alguna vez me he sentido
+                incómodo/a con Información que he vsito en internet.</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(11, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(11, 'No')">No</button>
@@ -191,9 +231,11 @@
         </div>
         <!-- Undecima pregunta -->
         <div id="question11" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
-            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Podria grabar videos íntimos o eróticos con mi enamorada o <br>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Podria grabar videos
+                íntimos o eróticos con mi enamorada o <br>
                 algún amigo de confianza?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(12, 'Sí')">Sí</button>
@@ -203,9 +245,11 @@
         </div>
         <!-- Duodecima pregunta -->
         <div id="question12" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Alguna vez me han propuesto grabarme videos o tomarme fotos<br>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Alguna vez me han
+                propuesto grabarme videos o tomarme fotos<br>
                 íntimas?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(13, 'Sí')">Sí</button>
@@ -215,9 +259,11 @@
         </div>
         <!-- decimotercera pregunta -->
         <div id="question13" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Me gusta compartir videos, mensajes o fotos íntimas?</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Me gusta compartir videos,
+                mensajes o fotos íntimas?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(14, 'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(14, 'No')">No</button>
@@ -226,9 +272,11 @@
         </div>
         <!-- decimoCuarta pregunta -->
         <div id="question14" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
-            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Alguna vez me he reunido presencialmente con alguien<br>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿Alguna vez me he reunido
+                presencialmente con alguien<br>
                 que conocí virtualmente?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(15, 'Sí')">Sí</button>
@@ -238,9 +286,11 @@
         </div>
         <!-- decimoQuinta pregunta -->
         <div id="question15" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
-            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid" >
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿He compartido las claves de mis redes sociales con mi<br> enamorada (o) o con un amigo?</h4>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
+            <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿He compartido las claves
+                de mis redes sociales con mi<br> enamorada (o) o con un amigo?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(16,'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(16,'No')">No</button>
@@ -249,9 +299,11 @@
         </div>
         <!-- decimoSextapregunta -->
         <div id="question16" class="question-container" style="display: none;">
-            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí” o “No”</h2>
+            <h2 class="titulo5 texto" style="font-weight: bold">Responde a cada una de las preguntas presionando en “Sí”
+                o “No”</h2>
             <img src="Iconos e imagenes\eva1.gif" alt="Imagen relacionada" class="img-fluid">
-            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿He compartido las claves de mis redes sociales con mi<br> enamorada (o) o con un amigo?</h4>
+            <h4><br class="texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">¿He compartido las claves
+                de mis redes sociales con mi<br> enamorada (o) o con un amigo?</h4>
             <div class="mt-3">
                 <button class="btn btn-primary" onclick="nextQuestion(16,'Sí')">Sí</button>
                 <button class="btn btn-secondary" onclick="nextQuestion(16,'No')">No</button>
@@ -277,44 +329,56 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-teal texto1-light py-4">
+    <footer class="bg-teal py-3">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <ul class="list-unstyled">
-                        <li><a href="configuracion-redes.html" class="texto1-light">Configuración</a></li>
-                        <li><a href="index.html#Riesgos" class="texto1-light">Información de riesgo</a></li>
-                        <li><a href="index.html#Ruta-denuncia" class="texto1-light">Ruta de denuncia</a></li>
-                        <li><a href="cuestionario.html" class="texto1-light">Autoevaluación</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="footer-section-title">ACCIONES</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="texto1-light">Hacer una denuncia</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="footer-section-title">POLÍTICAS</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="texto1-light">Términos y Condiciones</a></li>
-                        <li><a href="#" class="texto1-light">Política de Privacidad</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 texto1-center">
-                    <div class="social-icons">
-                        <a href="#" class="texto1-light me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="texto1-light me-3"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="texto1-light me-3"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="texto1-light me-3"><i class="bi bi-instagram"></i></a>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="Iconos e imagenes\logo-default-000.png" alt="CHS Alternativo">
+            <div class="row d-flex align-items-center flex-column flex-md-row justify-content-between">
+
+                <!-- IZQUIERDA: Logo + redes sociales -->
+                <div class="col-md-6 d-flex align-items-center mb-3 mb-md-0">
+                    <!-- Logo institucional -->
+                    <a href="https://chsalternativo.org/" target="_blank">
+                        <img src="Iconos e imagenes/logos/chs-alternativo-white.png" alt="CHS Alternativo"
+                            class="img-fluid me-3" style="max-height: 50px;">
+                    </a>
+
+                    <!-- Redes sociales -->
+                    <div class="social-icons d-flex align-items-center">
+                        <a href="https://www.facebook.com/chsperu" target="_blank" class="text-white me-3"><i
+                                class="bi bi-facebook fs-5"></i></a>
+                        <a href="https://www.tiktok.com/@chsalternativo" target="_blank" class="text-white me-3"><i
+                                class="bi bi-tiktok fs-5"></i></a>
+                        <a href="https://www.youtube.com/@CHSAlternativoperu" target="_blank" class="text-white me-3"><i
+                                class="bi bi-youtube fs-5"></i></a>
+                        <a href="https://www.instagram.com/chsalternativo" target="_blank" class="text-white me-3"><i
+                                class="bi bi-instagram fs-5"></i></a>
                     </div>
                 </div>
+
+                <!-- DERECHA: Descargar + Financiado -->
+                <div class="col-md-6 d-flex justify-content-md-end justify-content-center text-md-end text-center">
+
+                    <!-- Descargar -->
+                    <div class="me-4">
+                        <a href="https://play.google.com/store/apps/details?id=com.chs.app_leguas_amazonicas"
+                            target="_blank">
+                            <img src="Iconos e imagenes/logo_splash.png" alt="Descargar" class="img-fluid"
+                                style="max-height: 50px;">
+                        </a>
+                    </div>
+
+                    <!-- Financiado -->
+                    <div>
+                        <a href="https://safeonline.global/" target="_blank">
+                            <img src="Iconos e imagenes/logos/safe-online-white.png" alt="Financiado" class="img-fluid"
+                                style="max-height: 50px;">
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </footer>
+
     <script src="JAVASCRIPT/cuestionario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

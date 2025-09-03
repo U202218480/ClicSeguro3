@@ -114,3 +114,22 @@ function endSurvey() {
       }
       cambiarIdioma(idiomaGuardado);
     });
+
+
+    function verEstadistica() {
+  window.location.href = "#Riesgos";
+}
+
+    // Inicializar AOS
+AOS.init({
+  duration: 1000,
+  once: true
+});
+
+ScrollReveal().reveal('.sr-card', {
+  origin: 'bottom',
+  distance: '40px',
+  duration: 800,
+  interval: 150,
+  reset: false
+});

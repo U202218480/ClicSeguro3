@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click Seguro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
         body {
             background-image: url('Iconos e imagenes/tema_tapiz.png');
@@ -16,58 +17,72 @@
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
+            /*overflow-x: hidden;*/
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+
+
 </head>
 
 <body>
 
     <!-- Navbar -->
-
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="Iconos e imagenes\logo_splash.png" alt="Logo"
-                    style="width: 65px; height: 80px; margin-right: 35px;">
-            </a>
+
+            <!-- IZQUIERDA: Dos logos siempre visibles -->
+            <div class="d-flex align-items-center">
+                <img src="Iconos e imagenes/logo-default-000.png" alt="Logo 1" class="img-fluid me-2"
+                    style="max-height: 50px;">
+                <img src="Iconos e imagenes/logo_splash.png" alt="Logo 2" class="img-fluid me-3"
+                    style="max-height: 50px;">
+            </div>
+
+            <!-- Botón hamburguesa (móvil) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Lista de navegación alineada a la derecha -->
-                <ul class="navbar-nav justify-content-end ms-auto">
+
+            <!-- Contenido del navbar -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+
+                    <!-- Enlaces de navegación -->
                     <li class="nav-item">
-                        <a class="nav-link active texto" aria-current="page" href="index.html" style="font-weight: bold"
-                            data-en="Home" data-es="Inicio">‎ ‎ ‎
-                            Inicio‎ ‎ ‎ </a>
+                        <a class="nav-link active texto fw-bold" href="index.html" data-en="Home"
+                            data-es="Inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto" href="configuracion-redes.html" style="font-weight: bold"
-                            data-es="Configuración de Redes" data-tic="Meã ü̃āchixüca̲x i redes socialgü" data-kuk="" data-mat="Utsin isnushe quesnum nanacte" data-mur="Mare lloiji">‎ ‎ ‎
-                            Configuración de redes‎ ‎ ‎ </a>
+                        <a class="nav-link texto fw-bold" href="configuracion-redes.html" data-es="Configura tus redes"
+                            data-tic="Meã ü̃āchixüca̲x i redes socialgü" data-kuk=""
+                            data-mat="Utsin isnushe quesnum nanacte" data-mur="Mare lloiji">Configuración de redes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto" href="#Riesgos" style="font-weight: bold" data-es="Información de riesgo" data-tic="Auncümaxü i línea nüxü̃ cu cuxaxü̃" data-kuk="" data-mat="Minbi isambo icquid tantiate" data-mur="Riesgos en atona que debe conocer">‎ ‎ ‎ Información de riesgo‎ ‎ ‎
-                        </a>
+                        <a class="nav-link texto fw-bold" href="#Riesgos" data-es="Aprende sobre riesgos"
+                            data-tic="Auncümaxü i línea nüxü̃ cu cuxaxü̃" data-kuk=""
+                            data-mat="Minbi isambo icquid tantiate"
+                            data-mur="Riesgos en atona que debe conocer">Información de riesgo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto" href="#Ruta-denuncia" style="font-weight: bold" data-es="Ruta de denuncia" data-tic="Ruta uwan arü" data-kuk="" data-mat="Chuiuido bëtan adquid denunciauaquin" data-mur="Naɨ de llogɨdua">‎ ‎ ‎ Ruta de denuncia‎ ‎ ‎
-                        </a>
+                        <a class="nav-link texto fw-bold" href="#Ruta-denuncia" data-es="Ruta para denunciar"
+                            data-tic="Ruta uwan arü" data-kuk="" data-mat="Chuiuido bëtan adquid denunciauaquin"
+                            data-mur="Naɨ de llogɨdua">Ruta para denunciar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto" href="cuestionario.html" style="font-weight: bold" data-es="Autoevaluación" data-tic="yigütana i ngugüxü" data-kuk="" data-mat="Midapaden nau" data-mur="">‎ ‎ ‎ Autoevaluación‎ ‎ ‎
-                        </a>
+                        <a class="nav-link texto fw-bold" href="cuestionario.html" data-es="Autoevaluación"
+                            data-tic="yigütana i ngugüxü" data-kuk="" data-mat="Midapaden nau"
+                            data-mur="">Autoevaluación</a>
                     </li>
 
-                    <!-- Botón Mi Cuenta -->
-                    <li class="nav-item">
-                        <a class="btn btn-custom texto" href="#" style="font-weight: bold" data-es="Mi Cuenta">‎ ‎ ‎ Mi Cuenta‎ ‎ ‎ </a>
-                    </li>
-
-                    <!-- Selector de idioma con margen a la izquierda -->
-                    <li class="nav-item ms-3">
+                    <!-- Selector de idioma con ícono -->
+                    <li class="nav-item ms-3 d-flex align-items-center">
+                        <i class="bi bi-globe text-white me-2 fs-5"></i>
                         <select id="selectorIdioma" class="form-select w-auto" onchange="cambiarIdioma(this.value)">
                             <option value="es" selected>Español</option>
                             <option value="tic">Ticuna</option>
@@ -76,224 +91,207 @@
                             <option value="mur">Murui Buee</option>
                         </select>
                     </li>
+
                 </ul>
             </div>
         </div>
-
-        </li>
-        </ul>
-        </div>
-        </div>
     </nav>
 
-    <!-- Main content -->
-    <div class="container-md my-5">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="mt-5"></div>
-                <div class="image-container text-center mt-4 mb-4">
-                    <img src="Iconos e imagenes\ambar.png" alt="Imagen relacionada" class="img-fluid"
-                        style="width: 320px; height: 516px; padding-top: 20px;">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="mt-5"></div>
-                <h2 class="titulo2 texto" style="font-weight: bold"data-es="Estamos para protegerte y guiarte en tu crecimiento responsable en la era digital">Estamos para protegerte y guiarte en tu crecimiento
-                    responsable en la era digital
-                </h2>
-            </div>
-        </div>
-    </div>
-    <div class="text-center mb-3">
-        <button class="btn btn-light texto" data-bs-toggle="collapse" data-bs-target="#articuloLargo" aria-expanded="false"
-            aria-controls="articuloLargo" style="font-size: 1.2rem;
-    padding: 12px 30px;"data-es="Ver Estadística">
-            Ver Estadística
-        </button>
-
-    </div>
-    <p></p>
-    <!-- Contenido colapsable con 3 imágenes -->
-    <div class="collapse" id="articuloLargo">
+    <header class="hero-section d-flex align-items-center">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <img src="Iconos e imagenes\Estadistica1.png" alt="Descripción 1" class="img-fluid mb-2"
-                        style="width: 400px; height: 380px;">
-                    <p></p>
-                    <p><br></p>
-                    <p class="texto" data-es="WhatsApp, TikTok y otras redes son ampliamente usadas por menores. Es fundamental acompañarlos y guiarlos para un uso seguro.">WhatsApp, TikTok y otras redes son ampliamente usadas por menores. Es fundamental acompañarlos y
-                        guiarlos para un uso seguro.</p>
+            <div class="row align-items-center">
+                <!-- Imagen a la izquierda -->
+                <div class="col-md-6 text-center mb-4 mb-md-0" data-aos="fade-right">
+                    <img src="Iconos e imagenes\ambar.png" alt="Ilustración Clic Seguro" class="img-fluid hero-img" />
+                </div>
 
-                </div>
-                <div class="col-md-4">
-                    <img src="Iconos e imagenes\estadisticas2.png" alt="Descripción 2" class="img-fluid mb-2"
-                        style="width: 320px; height: 440px;">
-                    <p class="texto" data-es="Los juegos más populares entre menores permiten interactuar con desconocidos, lo que puede representar un riesgo si no hay supervisión.">Los juegos más populares entre menores permiten interactuar con desconocidos, lo que puede
-                        representar un riesgo si no hay supervisión.</p>
-                </div>
-                <div class="col-md-4">
-                    <img src="Iconos e imagenes\estadisticas3.png" alt="Descripción 3" class="img-fluid mb-2"
-                        style="width: 350px; height: 420px;">
-                    <p></p>
-                    <p class="texto" data-es="El grooming sigue un proceso de manipulación emocional que comienza con la confianza y termina en amenazas. Reconocer sus etapas es clave para prevenir el abuso.">El grooming sigue un proceso de manipulación emocional que comienza con la confianza y termina en
-                        amenazas. Reconocer sus etapas es clave para prevenir el abuso.</p>
+                <!-- Texto a la derecha -->
+                <div class="col-md-6 text-white text-center text-md-start" data-aos="fade-left">
+                    <h1 class="display-5 fw-bold">Usa Click Seguro y haz que internet sea un lugar más seguro para
+                        niñas, niños y adolescentes</h1>
+                    <p class="lead"></p>
+                    <button class="btn btn-danger btn-lg mt-3" onclick="verEstadistica()">Sobre los riesgos en linea</button>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <!-- Riesgos Section -->
-    <div class="container mt-5">
-        <section>
-            <h2 id="Riesgos" class="titulo4 mb-4 texto" style="padding-top: 105px; font-weight: bold" data-es="RIESGOS EN LíNEA QUE DEBES CONOCER" data-es="INFORMACIÓN DE RIESGO" data-tic="AUNCÜMAXÜ I LÍNEA NÜXÜ̃ CU CUXAXÜ̃"  data-kuk=""  data-mat="MINBI ISAMBO ICQUID TANTIATE" data-mur="RIESGOS EN ATONA QUE DEBE CONOCER">RIESGOS EN LíNEA QUE DEBES CONOCER</h2>
-            <div class="row text-center">
-                <div class=" col-md-3 mb-4">
-                    <div class=" icon-box Container1 text-light p-4 rounded">
-                        <img src="Iconos e imagenes\grooming_icono.png" alt="Grooming" class="img-fluid mb-3"
-                            style="width: 210px; height: 175px;">
-                        <h5 class="texto" style="font-weight: bold; color:black" data-es="¿Qué es el Grooming?">¿Qué es el Grooming?</h5>
-                        <div class="collapse" id="Vermas1">
-                            <p class="texto" style="color:black" data-es="“¿Proposiciones a NNA con fines sexuales”. Es cuando un adulto establece una relación mediante internet con niñas, niños o adolescentes (NNA) para intercambiar mensajes sexuales, concretar encuentros sexuales, entre otros fines." data-tic="'Proposicionesgü a NNA con finegü chixe marexü̃' ngexgumarüxü̃ wuxi duxuxü̃ yaxü̃ internetwa na Aarüaxgüx i buxe ngexe yatüxe u adelescentemax (NNA) rü ore rü naxchicünaxa i chixegümarexü rü taama tama megüxü" data-kuk="" data-mat="Champi chedo internet dën isambo dadabëd iquec mensajen onquec isambobi iquenda. Adenbidi mibi bedcaidën isambobi matses ichome cac nidmeslaunenda" data-mur="“Proposiciones a NNA con fines sexuales”. Es cuando un eimɨe establece una relación mediante Internet con rɨñoisaɨaɨ, ɨisaɨaɨ, jitokomɨnɨaɨ (NNA) para intercambiar llote o joreño sexuales, concretar encuentros sexuales, entre otros fines.">"Proposiciones a NNA con fines sexuales". Es cuando un adulto establece una relación mediante internet con niñas, niños o adolescentes (NNA) para intercambiar mensajes sexuales, concretar encuentros sexuales, entre otros fines.</p>
+    <section class="riesgos-section py-5 bg-light">
+        <div class="container">
+            <h2 id="Riesgos" class="titulo4 mb-4 texto" style="padding-top: 105px; font-weight: bold"
+                data-es="RIESGOS EN LíNEA QUE DEBES CONOCER" data-es="INFORMACIÓN DE RIESGO"
+                data-tic="AUNCÜMAXÜ I LÍNEA NÜXÜ̃ CU CUXAXÜ̃" data-kuk="" data-mat="MINBI ISAMBO ICQUID TANTIATE"
+                data-mur="RIESGOS EN ATONA QUE DEBE CONOCER">RIESGOS EN LíNEA QUE DEBES CONOCER</h2>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 custom-card sr-card">
+                        <div class="card-img-wrapper">
+                            <img src="Iconos e imagenes\grooming_icono.png" alt="Grooming"
+                                class="card-img-top img-fluid" />
                         </div>
-                        <div class="d-flex justify-content-center align-items-center gap-2">
-                            <!-- Botón Ver Más -->
-                            <button class="btn btn-light texto" data-bs-toggle="collapse" data-bs-target="#Vermas1"
-                                aria-expanded="false" aria-controls="Vermas1" data-es="Ver Más" >
-                                Ver Más
-                            </button> 
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center">Grooming</h5>
+                            <p class="card-text short-text text-center">¿Qué es el Grooming?</p>
 
-                            <!-- Icono de audio 
-                            <img src="Iconos e imagenes\audio_icono.png" alt="Reproducir audio"
-                                style="width: 30px; cursor: pointer;" onclick="playAudio('audioGrooming')">-->
+
+                            <p class="card-text texto long-text d-none"
+                                data-es="“¿Proposiciones a NNA con fines sexuales?”. Es cuando un adulto establece una relación mediante internet con niñas, niños o adolescentes (NNA) para intercambiar mensajes sexuales, concretar encuentros sexuales, entre otros fines."
+                                data-tic="'Proposicionesgü a NNA con finegü chixe marexü̃' ngexgumarüxü̃ wuxi duxuxü̃ yaxü̃ internetwa na Aarüaxgüx i buxe ngexe yatüxe u adelescentemax (NNA) rü ore rü naxchicünaxa i chixegümarexü rü taama tama megüxü"
+                                data-kuk=""
+                                data-mat="Champi chedo internet dën isambo dadabëd iquec mensajen onquec isambobi iquenda. Adenbidi mibi bedcaidën isambobi matses ichome cac nidmeslaunenda"
+                                data-mur="“Proposiciones a NNA con fines sexuales”. Es cuando un eimɨe establece una relación mediante Internet con rɨñoisaɨaɨ, ɨisaɨaɨ, jitokomɨnɨaɨ (NNA) para intercambiar llote o joreño sexuales, concretar encuentros sexuales, entre otros fines.">
+                                "Proposiciones a NNA con fines sexuales?". Es cuando un adulto establece una relación
+                                mediante internet con niñas, niños o adolescentes (NNA) para intercambiar mensajes
+                                sexuales, concretar encuentros sexuales, entre otros fines.</p>
+
+                            <button class="btn btn-outline-light mt-auto toggle-btn">Ver más</button>
                         </div>
-                        <!-- Audio -->
-                        <!--<audio id="audioGrooming" src="Iconos e imagenes/Audios/6/audio_grooming.mp3"></audio>-->
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="icon-box Container1 text-light p-4 rounded">
-                        <img src="Iconos e imagenes\sexting_icono.png" alt="Sexting" class="img-fluid mb-3"
-                            style="width: 308px; height: 175px;">
-                        <h5 style="font-weight: bold ;color:black">¿Qué es el Sexting?</h5>
-                        <div class="collapse" id="Vermas2">
-                            <p class="texto" style="color:black" data-es="Intercambio de mensajes sexuales. Es cuando niñas, niños y
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 custom-card sr-card">
+                        <div class="card-img-wrapper">
+                            <img src="Iconos e imagenes\sexting_icono.png" alt="Sexting"
+                                class="card-img-top img-fluid" />
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center">Sexting</h5>
+                            <p class="card-text short-text text-center">¿Qué es el Sexting?</p>
+
+
+                            <p class="card-text texto long-text d-none" data-es="Intercambio de mensajes sexuales. Es cuando niñas, niños y
                                 adolescentes comparten
                                 mensajes sexualmente explícitos o imágenes sexuales autogeneradas por ellos."
-                                data-tic="“Oregü i tümaüne arü tama mexü̃.” Rü ngexguma buxe ngexe, yatüxe u adolescente tama compartegü i tumaünearü nguchaxü i chixegüxü̃ rü naxchicünaxagü." data-kuk="" data-mat="Utsi utsibëdquio onquequin chomied dadabëd iquec nëid ted Bacuëbo, champibo, canicuentsaido. Nibëd icte bunquidën mibi ubi min bedcaid chome" data-mur="“Intercambio de llote sexuales”. Es cuando NNA comparten llote sexualmente explícitos o joreño sexuales autogeneradas por naimakɨ." >Intercambio de mensajes sexuales. Es cuando niñas, niños y
+                                data-tic="“Oregü i tümaüne arü tama mexü̃.” Rü ngexguma buxe ngexe, yatüxe u adolescente tama compartegü i tumaünearü nguchaxü i chixegüxü̃ rü naxchicünaxagü."
+                                data-kuk=""
+                                data-mat="Utsi utsibëdquio onquequin chomied dadabëd iquec nëid ted Bacuëbo, champibo, canicuentsaido. Nibëd icte bunquidën mibi ubi min bedcaid chome"
+                                data-mur="“Intercambio de llote sexuales”. Es cuando NNA comparten llote sexualmente explícitos o joreño sexuales autogeneradas por naimakɨ.">
+                                Intercambio de mensajes sexuales. Es cuando niñas, niños y
                                 adolescentes comparten
                                 mensajes sexualmente explícitos o imágenes sexuales autogeneradas por ellos.</p>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center gap-2">
-                            <!-- Botón Ver Más -->
-                            <button class="btn btn-light texto" data-bs-toggle="collapse" data-bs-target="#Vermas2"
-                                aria-expanded="false" aria-controls="Vermas2" data-es="Ver Más">
-                                Ver Más
-                            </button>
 
-                            <!-- Icono de audio -->
-                            <!-- Icono de audio 
-                            <img src="Iconos e imagenes\audio_icono.png" alt="Reproducir audio"
-                                style="width: 30px; cursor: pointer;" onclick="playAudio('audioGrooming')">-->
+                            <button class="btn btn-outline-light mt-auto toggle-btn">Ver más</button>
                         </div>
-                        <!-- Audio -->
-                        <!--<audio id="audioSexting" src="Iconos e imagenes/Audios/8/audio_sexting.mp3"></audio>-->
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="icon-box Container1 text-light p-4 rounded">
-                        <img src="Iconos e imagenes\masnna_icono.png" alt="MASNA" class="img-fluid mb-3"
-                            style="width: 262px; height: 173px;">
-                        <h5 style="font-weight: bold; color:black">¿Qué es MASNNA?</h5>
-                        <div class="collapse" id="Vermas3">
-                            <p class="texto" style="color:black" data-es="“Intercambio de llote sexuales”. Es cuando NNA comparten llote sexualmente explícitos o joreño sexuales autogeneradas por naimakɨ." data-tic="Materialgü i chixegümarexü̃ i naü̃ne arü nguchaxü̃gü i buxe i ngexe rü yatüxe u adolescente. Toāeü nüxü̃  i faxü̃tax ngexgumarüxü̃ pornografia i baxecax guũma ñaãgü rü chixegümarexnü nixĩ." data-kuk="" data-mat="Adenbidi dadabëd icquin champi, bawëbo, caniabo. Adecbidi chudadquin bedcaid isenquio icquin Bacuëbo yec quequin" data-mur="“Material de abuso sexual de rɨnoisaɨaɨ, ɨisaɨaɨ, jitokomɨnɨaɨ”. También conocido como “pornografía infantil” (uerillakɨno). Es toda representación de actividades sexuales explícitas, uakoni o simuladas, o de los genitales de NNA con fines sexuales (con o sin fines de lucro). Incluye la producción, tráfico, lluakɨno, feka ja, eenuano del material.">Material de abuso sexual de niñas, niños o adolescentes. También
-                                conocido como “pornografía infantil”. Es toda representación de actividades sexuales explícitas,
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 custom-card sr-card">
+                        <div class="card-img-wrapper">
+                            <img src="Iconos e imagenes\masnna_icono.png" alt="MASNA" class="card-img-top img-fluid" />
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center">MASNNA</h5>
+                            <p class="card-text short-text text-center">¿Qué es el MASNNA?</p>
+
+
+                            <p class="card-text texto long-text d-none"
+                                data-es="“Intercambio de llote sexuales”. Es cuando NNA comparten llote sexualmente explícitos o joreño sexuales autogeneradas por naimakɨ."
+                                data-tic="Materialgü i chixegümarexü̃ i naü̃ne arü nguchaxü̃gü i buxe i ngexe rü yatüxe u adolescente. Toāeü nüxü̃  i faxü̃tax ngexgumarüxü̃ pornografia i baxecax guũma ñaãgü rü chixegümarexnü nixĩ."
+                                data-kuk=""
+                                data-mat="Adenbidi dadabëd icquin champi, bawëbo, caniabo. Adecbidi chudadquin bedcaid isenquio icquin Bacuëbo yec quequin"
+                                data-mur="“Material de abuso sexual de rɨnoisaɨaɨ, ɨisaɨaɨ, jitokomɨnɨaɨ”. También conocido como “pornografía infantil” (uerillakɨno). Es toda representación de actividades sexuales explícitas, uakoni o simuladas, o de los genitales de NNA con fines sexuales (con o sin fines de lucro). Incluye la producción, tráfico, lluakɨno, feka ja, eenuano del material.">
+                                Material de abuso sexual de niñas, niños o adolescentes. También
+                                conocido como “pornografía infantil”. Es toda representación de actividades sexuales
+                                explícitas,
                                 reales o simuladas, o de los genitales de niñas, niños o adolescentes con fines sexuales
                                 (con o sin fines de lucro). Incluye la producción, tráfico, difusión, venta o
                                 almacenamiento de material.</p>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center gap-2">
-                            <!-- Botón Ver Más -->
-                            <button class="btn btn-light texto" data-bs-toggle="collapse" data-bs-target="#Vermas3"
-                                aria-expanded="false" aria-controls="Vermas3"data-es="Ver Más">
-                                Ver Más
-                            </button>
 
-                            <!-- Icono de audio -->
-                            <!-- Icono de audio 
-                            <img src="Iconos e imagenes\audio_icono.png" alt="Reproducir audio"
-                                style="width: 30px; cursor: pointer;" onclick="playAudio('audioGrooming')">-->
+                            <button class="btn btn-outline-light mt-auto toggle-btn">Ver más</button>
                         </div>
-                        <!-- Audio -->
-                        <!--<audio id="audioMASNNAA" src="Iconos e imagenes\Audios\9\audio_masnna.mp3"></audio>-->
-
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="icon-box Container1 text-light p-4 rounded">
-                        <img src="Iconos e imagenes\sextorcion_icono.png" alt="Sextoricon" class="img-fluid mb-3"
-                            style="width: 167px; height: 170px;">
-                        <h5 style="font-weight: bold; color:black">¿Qué es Extorsión Sexsual?</h5>
-                        <div class="collapse" id="Vermas4">
-                            <p class="texto" style="color:black" data-es="Chantaje sexual. Es cuando se extorsiona a una niña, niño o adolescentes bajo la amenaza
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 custom-card sr-card">
+                        <div class="card-img-wrapper">
+                            <img src="Iconos e imagenes\sextorcion_icono.png" alt="Sextorcion"
+                                class="card-img-top img-fluid" />
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center">Extorsión Sexual</h5>
+                            <p class="card-text short-text text-center">¿Qué es el Extorsión Sexual?</p>
+
+
+                            <p class="card-text texto long-text d-none" data-es="Chantaje sexual. Es cuando se extorsiona a una niña, niño o adolescentes bajo la amenaza
                                 de compartir imágenes u otros contenidos sexuales de la víctima sin su consentimiento
-                                para obtener retribuciones sexuales, dinero o cualquier otro beneficio de la víctima." data-tic="Dexagü i  müxeērüxü i naüne arü nguchaxü̃gü Buxü̃gü i yaxü̃gü ñuxã chi naxtüwa i tüxüwa i tüxü i nbaixgü torü dierü loxgü benefisiogux rü maxã" data-kuk="" data-mat="Adecbidi mibi isambo icqui dën choca cac nidenquio mibi piuequid menenu quequin chedonbo chiec mibi" data-mur="“Jɨfuia sexual”. Es cuando se extorsiona a un NNA bajo jakɨouano de compartir joreño u otros contenidos sexuales de la víctima sin su naiño jitaiñede para obtener retribuciones sexuales, ukube o cualquier otro beneficio de la víctima.">Chantaje sexual. Es cuando se extorsiona a una niña, niño o adolescentes bajo la amenaza
+                                para obtener retribuciones sexuales, dinero o cualquier otro beneficio de la víctima."
+                                data-tic="Dexagü i  müxeērüxü i naüne arü nguchaxü̃gü Buxü̃gü i yaxü̃gü ñuxã chi naxtüwa i tüxüwa i tüxü i nbaixgü torü dierü loxgü benefisiogux rü maxã"
+                                data-kuk=""
+                                data-mat="Adecbidi mibi isambo icqui dën choca cac nidenquio mibi piuequid menenu quequin chedonbo chiec mibi"
+                                data-mur="“Jɨfuia sexual”. Es cuando se extorsiona a un NNA bajo jakɨouano de compartir joreño u otros contenidos sexuales de la víctima sin su naiño jitaiñede para obtener retribuciones sexuales, ukube o cualquier otro beneficio de la víctima.">
+                                Chantaje sexual. Es cuando se extorsiona a una niña, niño o adolescentes bajo la amenaza
                                 de compartir imágenes u otros contenidos sexuales de la víctima sin su consentimiento
                                 para obtener retribuciones sexuales, dinero o cualquier otro beneficio de la víctima.
                             </p>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center gap-2">
-                            <!-- Botón Ver Más -->
-                            <button class="btn btn-light texto" data-bs-toggle="collapse" data-bs-target="#Vermas4"
-                                aria-expanded="false" aria-controls="Vermas4" data-es="Ver Más">
-                                Ver Más
-                            </button>
 
-                            <!-- Icono de audio -->
-                            <!-- Icono de audio 
-                            <img src="Iconos e imagenes\audio_icono.png" alt="Reproducir audio"
-                                style="width: 30px; cursor: pointer;" onclick="playAudio('audioGrooming')">-->
+                            <button class="btn btn-outline-light mt-auto toggle-btn">Ver más</button>
                         </div>
-                        <!-- Audio -->
-                    <!--<audio id="audio_sextorsion" src="Iconos e imagenes\Audios\10\audio_sextorsion.mp3"></audio>-->
-
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Ruta de Denuncia -->
-        <section class="mt-5">
-            <h2 id="Ruta-denuncia" class="titulo1 mb-4 texto" style="padding-top: 105px; font-weight: bold" data-es="RUTA DE DENUNCIA" data-tic="RUTA UWAN ARÜ" data-kuk="" data-mat="CHUIUIDO BËTAN ADQUID DENUNCIAUAQUIN" data-mur="NAɨ DE LLOGɨDUA">RUTA DE DENUNCIA
+                <!-- Puedes duplicar este bloque para más cards -->
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section class="mt-5 mb-5">
+        <div class="container mt-5">
+            <h2 id="Ruta-denuncia" class="titulo1 mb-4 texto" style="padding-top: 105px; font-weight: bold"
+                data-es="RUTA DE DENUNCIA" data-tic="RUTA UWAN ARÜ" data-kuk=""
+                data-mat="CHUIUIDO BËTAN ADQUID DENUNCIAUAQUIN" data-mur="NAɨ DE LLOGɨDUA">RUTA DE DENUNCIA
             </h2>
             <div class="row text-center">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="fade-right">
                     <div class="icon-box text-light p-4 rounded">
-                        <h4 class="titulo1 texto" data-es="Identifíca" data-tic="Nangugü" data-kuk="" data-mat="Bëyuc isquin tsuda nec quequin tantiaquin" data-mur="Identifica">Identifíca</h4>
+                        <h4 class="titulo1 texto" data-es="Identifíca" data-tic="Nangugü" data-kuk=""
+                            data-mat="Bëyuc isquin tsuda nec quequin tantiaquin" data-mur="Identifica">Identifíca</h4>
                         <img src="Iconos e imagenes\identifica_acciones.png" alt="Identifica" class="img-fluid mb-3"
                             style="width: 240px; height: 180px;">
                         <a>‎‎‎ </a>
                         <img src="Iconos e imagenes\audio_icono.png" alt="Reproducir audio"
                             style="width: 30px; cursor: pointer;" onclick="playAudio('audio_identifica')">
                         <p class="texto1 texto" data-es="Reconoce una conducta inadecuada hacia un menor de edad y avisa a tus padres o
-                            a algún adulto de suma confianza." data-tic="Nüxu cu daüxgüx wuxi nacuma tama mexü wüxi buxũma rü cuna tügümaxã nuxü̃ iu rexma wüxie yaxe tana cua puxemaã" data-kuk="" data-mat="Tantiaquin tsuda tsiuec seta ictsëcquidi nec quequin isquin, adshun aton papan tantiashunec iquec" data-mur="Faɨriote una conducta maraiñede hacia una janosa, llono o moomo iemo kome eimɨemo, uiñogamɨe">Reconoce una conducta inadecuada hacia un menor de edad y avisa a tus padres o
+                            a algún adulto de suma confianza."
+                            data-tic="Nüxu cu daüxgüx wuxi nacuma tama mexü wüxi buxũma rü cuna tügümaxã nuxü̃ iu rexma wüxie yaxe tana cua puxemaã"
+                            data-kuk=""
+                            data-mat="Tantiaquin tsuda tsiuec seta ictsëcquidi nec quequin isquin, adshun aton papan tantiashunec iquec"
+                            data-mur="Faɨriote una conducta maraiñede hacia una janosa, llono o moomo iemo kome eimɨemo, uiñogamɨe">
+                            Reconoce una conducta inadecuada hacia un menor de edad y avisa a tus padres o
                             a algún adulto de suma confianza.</p>
                     </div>
                     <audio id="audio_identifica" src="Iconos e imagenes\Audios\13\audio_identifica.mp3"></audio>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="fade-up">
                     <div class="icon-box text-light p-4 rounded">
-                        <h4 class="titulo1 texto" data-es="¿Dónde denunciar?" data-tic="¿ngexta inauwan?" data-kuk="¿Haka denunciar?" data-mat="Midashunquio icsambo icquid nate bune" data-mur="¿Nɨnomo llogɨdoite?">¿Dónde denunciar?</h4>
+                        <h4 class="titulo1 texto" data-es="¿Dónde denunciar?" data-tic="¿ngexta inauwan?"
+                            data-kuk="¿Haka denunciar?" data-mat="Midashunquio icsambo icquid nate bune"
+                            data-mur="¿Nɨnomo llogɨdoite?">¿Dónde denunciar?</h4>
                         <img src="Iconos e imagenes\donde_denunciar.png" alt="¿Dónde denuncia?" class="img-fluid mb-3"
                             style="width: 240px; height: 180px;">
-                        <p class="texto1 mt-3 texto" data-es="Los canales de denuncia inmediatos incluyen la Línea 1818 del MININTER para casos de trata de personas, la Línea 100 del MIMP para violencia contra niñas, niños y adolescentes, y la Línea ANNA 1810 del MIMP que brinda atención oportuna ante violencia o desprotección familiar, además de la posibilidad de acudir a la comisaría o fiscalía más cercana. Las denuncias pueden realizarse de forma presencial, virtual o mediante llamada telefónica." data-tic="Uwancax ru comisariwa naũ u fiscaliwa cuxcax inangaicamaü̃wa, virtual ãcütax name i uwante y ngexmatacagü. Linea 1818 - MININTER (trata de personas) , Linea 1810 - Minesterio i ngexearü vulnarables (nana ã i cagü ngetanü rü especialistagü rü baxegüna ru adolescente tünagüarü derechogü rü na Velneradesgü" data-kuk="" data-mat="Icsambuen nate buquin nidec chuiquido yacno, Nidec podo canëshanquid chedo chuiquin, adenbidi uadnoshombi cuënash onquequin pashashcananten. Cuënte icsambo icquid nanun onqueten cuënquin. Adenbidi chidobo icsambue aduedo, chambi, bacuëbo adenbidi caniaboyec. Chuiquin podo canëshanquid onquequën chuiquin. Ministedio o utsibo chuiquido chuiquin onquecuededquin." data-mur="">
-                            Los canales de denuncia inmediatos incluyen la Línea 1818 del MININTER para casos de trata de personas, la Línea 100 del MIMP para violencia contra niñas, niños y adolescentes, y la Línea ANNA 1810 del MIMP que brinda atención oportuna ante violencia o desprotección familiar, además de la posibilidad de acudir a la comisaría o fiscalía más cercana. Las denuncias pueden realizarse de forma presencial, virtual o mediante llamada telefónica.
+                        <p class="texto1 mt-3 texto"
+                            data-es="Los canales de denuncia inmediatos incluyen la Línea 1818 del MININTER para casos de trata de personas, la Línea 100 del MIMP para violencia contra niñas, niños y adolescentes, y la Línea ANNA 1810 del MIMP que brinda atención oportuna ante violencia o desprotección familiar, además de la posibilidad de acudir a la comisaría o fiscalía más cercana. Las denuncias pueden realizarse de forma presencial, virtual o mediante llamada telefónica."
+                            data-tic="Uwancax ru comisariwa naũ u fiscaliwa cuxcax inangaicamaü̃wa, virtual ãcütax name i uwante y ngexmatacagü. Linea 1818 - MININTER (trata de personas) , Linea 1810 - Minesterio i ngexearü vulnarables (nana ã i cagü ngetanü rü especialistagü rü baxegüna ru adolescente tünagüarü derechogü rü na Velneradesgü"
+                            data-kuk=""
+                            data-mat="Icsambuen nate buquin nidec chuiquido yacno, Nidec podo canëshanquid chedo chuiquin, adenbidi uadnoshombi cuënash onquequin pashashcananten. Cuënte icsambo icquid nanun onqueten cuënquin. Adenbidi chidobo icsambue aduedo, chambi, bacuëbo adenbidi caniaboyec. Chuiquin podo canëshanquid onquequën chuiquin. Ministedio o utsibo chuiquido chuiquin onquecuededquin."
+                            data-mur="">
+                            Los canales de denuncia inmediatos incluyen la Línea 1818 del MININTER para casos de trata
+                            de personas, la Línea 100 del MIMP para violencia contra niñas, niños y adolescentes, y la
+                            Línea ANNA 1810 del MIMP que brinda atención oportuna ante violencia o desprotección
+                            familiar, además de la posibilidad de acudir a la comisaría o fiscalía más cercana. Las
+                            denuncias pueden realizarse de forma presencial, virtual o mediante llamada telefónica.
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="fade-left">
                     <div class="icon-box text-light p-4 rounded">
-                        <h4 class="titulo1 texto" data-es="Comunícate" data-tic="dexagü" data-kuk="Isapuki" data-mat="Onqueta" data-mur="Llono">Comunícate</h4>
+                        <h4 class="titulo1 texto" data-es="Comunícate" data-tic="dexagü" data-kuk="Isapuki"
+                            data-mat="Onqueta" data-mur="Llono">Comunícate</h4>
                         <img src="Iconos e imagenes\comunicate_con_nosotros.png" alt="Comunicate" class="img-fluid mb-3"
                             style="width: 240px; height: 180px;">
                         <a>‎‎‎ </a>
@@ -301,7 +299,11 @@
                             style="width: 30px; cursor: pointer;" onclick="playAudio('audio_Comunicate')">
                         <p class="texto1 texto" data-es="CHS Alternativo acompaña y apoya a las denuncias a través del Centro de
                             Atención y Orientación Legal y Psicosocial. La atención y la orientación son gratuitas las
-                            24 horas a través del número" data-tic="guxũma rü na ngetanü rü 24 horas rü nagu ta cagüya daa númerpo" data-kuk="" data-mat="Nashumënquid yacno nidec: Abitedi uëshë yacno onquenum chuiquin" data-mur="CHS Alternativo acompaña y apoya a las llogɨdua a través del Centro de Asistencia y Orientación Legal y Psicosocial (CALP). La atención y la orientación son gratuitas las 24 horas a través del número">CHS Alternativo acompaña y apoya a las denuncias a través del Centro de
+                            24 horas a través del número"
+                            data-tic="guxũma rü na ngetanü rü 24 horas rü nagu ta cagüya daa númerpo" data-kuk=""
+                            data-mat="Nashumënquid yacno nidec: Abitedi uëshë yacno onquenum chuiquin"
+                            data-mur="CHS Alternativo acompaña y apoya a las llogɨdua a través del Centro de Asistencia y Orientación Legal y Psicosocial (CALP). La atención y la orientación son gratuitas las 24 horas a través del número">
+                            CHS Alternativo acompaña y apoya a las denuncias a través del Centro de
                             Atención y Orientación Legal y Psicosocial. La atención y la orientación son gratuitas las
                             24 horas a través del número </p>
                         <h5 class="texto2">+51 945 092 929</h5>
@@ -310,101 +312,149 @@
 
                 </div>
             </div>
-        </section>
-        <!--<div class="text-center mb-3">
-            <button class="btn btn-light" data-bs-toggle="collapse" data-bs-target="#articuloLargo"
-                aria-expanded="false" aria-controls="articuloLargo" style="font-size: 1.2rem;
-    padding: 12px 30px;">
-                Saber más
-            </button>
-
         </div>
-        <p></p>
-        Contenido colapsable con 3 imágenes 
-        <div class="collapse" id="articuloLargo"></div>
+    </section>
 
-    </div>-->
+    <section class="mt-5 important-section mb-5">
+        <div class="container mt-5">
+            <h3 class="titulo3 mb-4" style="font-weight: bold;">¡MUY IMPORTANTE!</h3>
 
-    <div class="container mt-5">
-        <h3 class="titulo3 mb-4" style="font-weight: bold">¡MUY IMPORTANTE!</h3>
-        <section class="mt-5 important-section mb-5">
             <div class="row">
-                <!-- Primer contenedor: Configuración de redes -->
-                <div class="col-md-6 mb-4">
-                    <div class="card Container2">
-                        <div class="card-body text-center text-light">
-                            <img src="Iconos e imagenes\configuracion_redes_icono.png"
+                <!-- Configuración de redes -->
+                <div class="col-md-6 mb-4 h-100" data-aos="fade-right">
+                    <div class="card h-100 d-flex flex-column hover-effect Container2">
+                        <div class="card-body text-center text-light d-flex  flex-column">
+                            <img src="Iconos e imagenes/configuracion_redes_icono.png"
                                 alt="Configuración segura de redes" class="img-fluid mb-3"
-                                style="width: 100px; height: 100px; background-color: #007e89">
+                                style="width: 100px; height: 100px; background-color: #007e89;">
                             <h5>Configuración segura de redes</h5>
-                            <p>Aprende a configurar tus redes de manera correcta para estar más seguro</p>
-                            <a href="configuracion-redes.html" class="btn btn-light">Continuar</a>
+                            <p>Aprende a configurar tus redes de manera correcta para estar seguro</p>
+                            <div class="mt-auto">
+                                <a href="configuracion-redes2.html"
+                                    class="btn btn-outline-light mt-auto toggle-btn">Continuar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Segundo contenedor: Autoevaluación -->
-                <div class="col-md-6 mb-4">
-                    <div class="card Container3">
-                        <div class="card-body text-center text-light">
-                            <img src="Iconos e imagenes\autoevaluacion_icono.png" alt="Autoevaluación"
-                                class="img-fluid mb-3" style="width: 100px; height: 100px;background-color: #91c7ce ">
+                <!-- Autoevaluación -->
+                <div class="col-md-6 mb-4 h-100" data-aos="fade-left">
+                    <div class="card h-100 d-flex flex-column hover-effect Container3">
+                        <div class="card-body text-center text-light d-flex flex-column">
+                            <img src="Iconos e imagenes/autoevaluacion_icono.png" alt="Autoevaluación"
+                                class="img-fluid mb-3" style="width: 100px; height: 100px; background-color: #91c7ce;">
                             <h5>Autoevaluación</h5>
                             <p>Prueba tus conocimientos sobre lo aprendido con este cuestionario</p>
-                            <a href="cuestionario.html" class="btn btn-light">Continuar</a>
+                            <div class="mt-auto">
+                                <a href="cuestionario.html"
+                                    class="btn btn-outline-light mt-auto toggle-btn">Continuar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <section class="info-section py-5 text-center">
+        <div class="container mt-5">
+            <div class="row text-center">
+                <h2 class="text-warning fw-bold">ESTADÍSTICA</h2>
+
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="Iconos e imagenes\Estadistica1.png" alt="Descripción 1" class="img-fluid mb-2"
+                        style="width: 400px; height: 380px;">
+                    <p></p>
+                    <p><br></p>
+                    <p class="texto"
+                        data-es="WhatsApp, TikTok y otras redes son ampliamente usadas por menores. Es fundamental acompañarlos y guiarlos para un uso seguro.">
+                        WhatsApp, TikTok y otras redes son ampliamente usadas por menores. Es fundamental acompañarlos y
+                        guiarlos para un uso seguro.</p>
+
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <img src="Iconos e imagenes\estadisticas2.png" alt="Descripción 2" class="img-fluid mb-2"
+                        style="width: 320px; height: 440px;">
+                    <p class="texto"
+                        data-es="Los juegos más populares entre menores permiten interactuar con desconocidos, lo que puede representar un riesgo si no hay supervisión.">
+                        Los juegos más populares entre menores permiten interactuar con desconocidos, lo que puede
+                        representar un riesgo si no hay supervisión.</p>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <img src="Iconos e imagenes\estadisticas3.png" alt="Descripción 3" class="img-fluid mb-2"
+                        style="width: 350px; height: 420px;">
+                    <p></p>
+                    <p class="texto"
+                        data-es="El grooming sigue un proceso de manipulación emocional que comienza con la confianza y termina en amenazas. Reconocer sus etapas es clave para prevenir el abuso.">
+                        El grooming sigue un proceso de manipulación emocional que comienza con la confianza y termina
+                        en
+                        amenazas. Reconocer sus etapas es clave para prevenir el abuso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Ruta de Denuncia -->
+
+
+
 
     <!-- Footer -->
-    <footer class="bg-teal texto1-light py-4">
+    <footer class="bg-teal py-3">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <ul class="list-unstyled">
-                        <li><a href="configuracion-redes.html" class="texto1-light">Configuración</a></li>
-                        <li><a href="index.html#Riesgos" class="texto1-light">Información de riesgo</a></li>
-                        <li><a href="index.html#Ruta-denuncia" class="texto1-light">Ruta de denuncia</a></li>
-                        <li><a href="cuestionario.html" class="texto1-light">Autoevaluación</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="footer-section-title">ACCIONES</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="texto1-light">Hacer una denuncia</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="footer-section-title">POLÍTICAS</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="texto1-light">Términos y Condiciones</a></li>
-                        <li><a href="#" class="texto1-light">Política de Privacidad</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="social-icons">
-                        <a href="#" class="texto1-light me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="texto1-light me-3"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="texto1-light me-3"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="texto1-light me-3"><i class="bi bi-instagram"></i></a>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="Iconos e imagenes\logo-default-000.png" alt="CHS Alternativo">
+            <div class="row d-flex align-items-center flex-column flex-md-row justify-content-between">
+
+                <!-- IZQUIERDA: Logo + redes sociales -->
+                <div class="col-md-6 d-flex align-items-center mb-3 mb-md-0">
+                    <!-- Logo institucional -->
+                    <a href="https://chsalternativo.org/" target="_blank">
+                        <img src="Iconos e imagenes/logos/chs-alternativo-white.png" alt="CHS Alternativo"
+                            class="img-fluid me-3" style="max-height: 50px;">
+                    </a>
+
+                    <!-- Redes sociales -->
+                    <div class="social-icons d-flex align-items-center">
+                        <a href="https://www.facebook.com/chsperu" target="_blank" class="text-white me-3"><i
+                                class="bi bi-facebook fs-5"></i></a>
+                        <a href="https://www.tiktok.com/@chsalternativo" target="_blank" class="text-white me-3"><i
+                                class="bi bi-tiktok fs-5"></i></a>
+                        <a href="https://www.youtube.com/@CHSAlternativoperu" target="_blank" class="text-white me-3"><i
+                                class="bi bi-youtube fs-5"></i></a>
+                        <a href="https://www.instagram.com/chsalternativo" target="_blank" class="text-white me-3"><i
+                                class="bi bi-instagram fs-5"></i></a>
                     </div>
                 </div>
+
+                <!-- DERECHA: Descargar + Financiado -->
+                <div class="col-md-6 d-flex justify-content-md-end justify-content-center text-md-end text-center">
+
+                    <!-- Descargar -->
+                    <div class="me-4">
+                        <a href="https://play.google.com/store/apps/details?id=com.chs.app_leguas_amazonicas"
+                            target="_blank">
+                            <img src="Iconos e imagenes/logo_splash.png" alt="Descargar" class="img-fluid"
+                                style="max-height: 50px;">
+                        </a>
+                    </div>
+
+                    <!-- Financiado -->
+                    <div>
+                        <a href="https://safeonline.global/" target="_blank">
+                            <img src="Iconos e imagenes/logos/safe-online-white.png" alt="Financiado" class="img-fluid"
+                                style="max-height: 50px;">
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </footer>
-    <script src="JAVASCRIPT/cuestionario.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
-        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
-        crossorigin="anonymous"></script>
+
+
+    <script src="JAVASCRIPT/main.js"></script>
 </body>
 
 </html>
