@@ -529,3 +529,24 @@ footer ul li a:hover {
   transform: translateY(-5px);
   border-color: rgba(255, 255, 255, 0.2); /* opcional */
 }
+
+
+
+/* Tarjeta más alta */
+.autoeval-card { min-height: 420px; }
+@media (min-width: 992px) { .autoeval-card { min-height: 480px; } }
+
+/* Ícono más grande */
+.autoeval-icon {
+  width: 160px;     /* antes 100px */
+  height: 160px;    /* antes 100px */
+  background-color: #91c7ce;
+  object-fit: contain;
+}
+
+/* Título y texto más grandes */
+.autoeval-title { font-size: 1.75rem; }   /* h4 ~ 28px aprox */
+.autoeval-text  { font-size: 1.05rem; }
+
+/* (Opcional) un poco más de peso visual al botón al pasar */
+.toggle-btn:hover { transform: translateY(-1px); }
