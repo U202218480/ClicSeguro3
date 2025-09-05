@@ -1,5 +1,15 @@
 let currentlyPlayingAudio = null;
 
+document.addEventListener("DOMContentLoaded", () => {
+  const idiomaGuardado = localStorage.getItem("idioma") || "es";
+  const selector = document.getElementById("selectorIdioma");
+  if (selector) {
+    selector.value = idiomaGuardado;
+  }
+  cambiarIdioma(idiomaGuardado);
+});
+
+
 function playAudio(audioId) {
   const audioToPlay = document.getElementById(audioId);
 
@@ -36,20 +46,6 @@ function cambiarIdioma(lang) {
     }
   });
   localStorage.setItem("idioma", lang);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const idiomaGuardado = localStorage.getItem("idioma") || "es";
-  const selector = document.getElementById("selectorIdioma");
-  if (selector) {
-    selector.value = idiomaGuardado;
-  }
-  cambiarIdioma(idiomaGuardado);
-});
-
-
-function verEstadistica() {
-  window.location.href = "#Riesgos";
 }
 
 // Inicializar AOS
@@ -90,3 +86,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+
+function verPeligros() {
+  window.location.href = "#Riesgos";
+}
+
+function verRutaDenuncia() {
+  window.location.href = "#Ruta-denuncia";
+}
+
+function verConfiguracion() {
+  window.location.href = "configuracion-redes.html";
+}
