@@ -58,7 +58,7 @@ AOS.init({
 
 ScrollReveal().reveal('.sr-card', {
   origin: 'bottom',
-  distance: '40px',
+  distance: '50px',
   duration: 800,
   interval: 150,
   reset: false
@@ -100,3 +100,18 @@ function verRutaDenuncia() {
 function verConfiguracion() {
   window.location.href = "configuracion-redes.html";
 }
+
+
+
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.icon-box');
+      const shortText = card.querySelector('.short-text');
+      const longText = card.querySelector('.long-text');
+
+      shortText.classList.toggle('d-none');
+      longText.classList.toggle('d-none');
+
+      btn.textContent = btn.textContent === 'Ver más' ? 'Ver menos' : 'Ver más';
+    });
+  });

@@ -16,15 +16,16 @@
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
+   <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container-fluid">
 
             <!-- IZQUIERDA: Dos logos siempre visibles -->
             <div class="d-flex align-items-center">
-                <img src="Iconos e imagenes/logo-default-000.png" alt="CHS ALTERNATIVO" class="img-fluid me-2"
-                    style="max-height: 50px;">
-                <img src="Iconos e imagenes/logo_splash.png" alt="CLICK SEGURO" class="img-fluid me-3"
-                    style="max-height: 50px;">
+                <div class="d-flex align-items-center">
+                    <img src="Iconos e imagenes/logo-default-000.png" alt="CHS ALTERNATIVO" class="navbar-logo me-2">
+                    <img src="Iconos e imagenes/logo_splash.png" alt="CLICK SEGURO" class="navbar-logo me-3">
+                </div>
             </div>
 
             <!-- Botón hamburguesa (móvil) -->
@@ -87,6 +88,7 @@
             <!-- Encabezado común -->
             <div class="text-center mb-4" style="padding-top: 5%;">
                 <h2 class="titulo5 texto" data-es="" data-tic="" data-kuk="" data-mat="" data-mur="">
+                    <br>
                     Responde a cada una de las preguntas presionando en “Sí” o “No”
                 </h2>
                 <img src="Iconos e imagenes/eva1.gif" alt="Imagen relacionada" class="img-fluid mx-auto d-block"
@@ -294,7 +296,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-teal py-3">
+    <footer class="bg-teal py-4"> <!-- aumenté py-3 a py-4 -->
         <div class="container">
             <div class="row d-flex align-items-center flex-column flex-md-row justify-content-between">
 
@@ -303,7 +305,7 @@
                     <!-- Logo institucional -->
                     <a href="https://chsalternativo.org/" target="_blank">
                         <img src="Iconos e imagenes/logos/chs-alternativo-white.png" alt="CHS Alternativo"
-                            class="img-fluid me-3" style="max-height: 50px;">
+                            class="img-fluid me-3 footer-logo">
                     </a>
 
                     <!-- Redes sociales -->
@@ -316,6 +318,8 @@
                                 class="bi bi-youtube fs-5"></i></a>
                         <a href="https://www.instagram.com/chsalternativo" target="_blank" class="text-white me-3"><i
                                 class="bi bi-instagram fs-5"></i></a>
+                        <a href="https://x.com/chsalternativo" target="_blank" class="text-white me-3"><i
+                                class="bi bi-twitter-x fs-5"></i></a>
                     </div>
                 </div>
 
@@ -326,16 +330,15 @@
                     <div class="me-4">
                         <a href="https://play.google.com/store/apps/details?id=com.chs.app_leguas_amazonicas"
                             target="_blank">
-                            <img src="Iconos e imagenes/logo_splash.png" alt="Descargar" class="img-fluid"
-                                style="max-height: 50px;">
+                            <img src="Iconos e imagenes/logo_splash.png" alt="Descargar" class="img-fluid footer-logo">
                         </a>
                     </div>
 
                     <!-- Financiado -->
                     <div>
                         <a href="https://safeonline.global/" target="_blank">
-                            <img src="Iconos e imagenes/logos/safe-online-white.png" alt="Financiado" class="img-fluid"
-                                style="max-height: 50px;">
+                            <img src="Iconos e imagenes/logos/safe-online-white.png" alt="Financiado"
+                                class="img-fluid footer-logo">
                         </a>
                     </div>
                 </div>
