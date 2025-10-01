@@ -532,7 +532,7 @@ footer ul li a:hover {
 
 
 body { 
-  background-image: url('../Iconos e imagenes/tema_tapiz.png') !important;
+  background-image: url('../Iconos e imagenes/tema_tapiz.webp') !important;
   background-size: 500px auto !important; /* ajusta 200px a lo que necesites */
   background-repeat: repeat !important;   /* se repite en mosaico */
   background-position: center top !important;
@@ -572,7 +572,9 @@ body {
   --nav-offset: 0px;    /* compensa redondeos (línea blanca) */
 }
 @media (min-width: 992px){
-  :root{ --nav-h: px; }
+  :root{ 
+    --nav-h: 80px;      /* Ajusta la altura del navbar para pantallas grandes */
+  }
 }
 
 /* Elimina cualquier borde o sombra que genere la “línea” */
@@ -584,61 +586,89 @@ body {
 }
 
 /* Asegura que no haya márgenes que se “cuelen” arriba */
-html, body{ margin: 0; }
+html, body{ 
+  margin: 0; 
+}
 
 /* Si usas .fixed-top: desplaza el documento exactamente bajo el navbar */
 body{
-  padding-top: calc(var(--nav-h) - var(--nav-offset));
+  padding-top: calc(var(--nav-h) - var(--nav-offset)); /* Desplaza el contenido debajo del navbar */
 }
 
 /* El hero ocupa la pantalla menos el navbar */
 .hero-carousel,
 .hero-slide{
-  min-height: calc(100svh - var(--nav-h));
+  min-height: calc(100svh - var(--nav-h)); /* Ajuste de altura del hero sin tapar el navbar */
 }
+
 @supports (height: 100dvh){
   .hero-carousel,
   .hero-slide{
-    min-height: calc(100dvh - var(--nav-h));
+    min-height: calc(100dvh - var(--nav-h)); /* Soporte para dispositivos que usan 100dvh */
   }
 }
 
 
 
 
-html {
-  scroll-padding-top: 35px; /* también depende de tu navbar */
-}
 
 
 
 
 
-
-
-
-
- /* Tamaño base (móvil) */
-  .img-carousel {
-    display: block;
-    max-width: 260px;   /* ancho máximo en CELULAR */
-    max-height: 220px;  /* alto máximo en CELULAR */
+/* Aumentar el tamaño del carrusel para que ocupe toda la pantalla */
+#heroCarousel {
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    height: 100vh; /* Hacer que el carrusel ocupe toda la altura de la ventana */
+    margin: 0 auto; /* Centrar el carrusel */
+}
 
-  /* Tablet/PC */
-  @media (min-width: 768px) {
-    .img-carousel {
-      max-width: 520px;   /* ancho máximo en PC */
-      max-height: 380px;  /* alto máximo en PC */
+/* Asegurar que el contenedor interno ocupe toda la altura del carrusel */
+.carousel-inner {
+    height: 100%; /* Ocupa toda la altura disponible */
+}
+
+/* Hacer que las imágenes del carrusel ocupen toda la pantalla */
+.carousel-item img {
+    width: 100%; /* Las imágenes ocupan todo el ancho del carrusel */
+    height: 100%; /* Las imágenes ocupan toda la altura del carrusel */
+    object-fit: cover; /* Asegura que las imágenes cubran el área disponible sin distorsionar */
+    border-radius: 0; /* Sin bordes redondeados para que ocupe todo el espacio */
+}
+
+/* Ajustar la alineación y espaciado de las columnas */
+.carousel-item .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Reducir el espaciado de los laterales dentro del contenedor */
+.carousel-item .container {
+    padding: 0; /* Eliminar el espaciado lateral */
+    max-width: 100%; /* Asegurar que el contenedor ocupe todo el ancho disponible */
+}
+
+/* Estilo para los controles del carrusel */
+.carousel-control-prev, .carousel-control-next {
+    color: #fff;
+    font-size: 2rem; /* Mayor tamaño de los controles */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 767px) {
+    .carousel-inner {
+        height: 60vh; /* Reducir la altura en pantallas pequeñas */
     }
-  }
 
-
+    .carousel-item img {
+        max-height: 400px; /* Reducir la altura máxima de las imágenes */
+    }
+}
 
 
   
