@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   cambiarIdioma(idiomaGuardado);
 });
 
-
 function playAudio(audioId) {
   const audioToPlay = document.getElementById(audioId);
 
@@ -23,7 +22,7 @@ function playAudio(audioId) {
     // Si el audio que queremos reproducir ya está sonando, lo pausamos.
     // Si está pausado, lo reproducimos.
     if (audioToPlay.paused) {
-      audioToPlay.play().catch(error => {
+      audioToPlay.play().catch((error) => {
         console.error("Error al reproducir el audio:", error);
         // Esto a menudo ocurre debido a las políticas de reproducción automática del navegador.
       });
@@ -39,8 +38,8 @@ function playAudio(audioId) {
 }
 
 function cambiarIdioma(lang) {
-  const elementos = document.querySelectorAll('.texto');
-  elementos.forEach(el => {
+  const elementos = document.querySelectorAll(".texto");
+  elementos.forEach((el) => {
     if (el.getAttribute(`data-${lang}`)) {
       el.textContent = el.getAttribute(`data-${lang}`);
     }
@@ -51,43 +50,38 @@ function cambiarIdioma(lang) {
 // Inicializar AOS
 AOS.init({
   duration: 1000,
-  once: true
+  once: true,
 });
 
-
-
-ScrollReveal().reveal('.sr-card', {
-  origin: 'bottom',
-  distance: '50px',
+ScrollReveal().reveal(".sr-card", {
+  origin: "bottom",
+  distance: "50px",
   duration: 800,
   interval: 150,
-  reset: false
+  reset: false,
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".toggle-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const cardBody = btn.closest(".card-body");
+      const shortText = cardBody.querySelector(".short-text");
+      const longText = cardBody.querySelector(".long-text");
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.toggle-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const cardBody = btn.closest('.card-body');
-      const shortText = cardBody.querySelector('.short-text');
-      const longText = cardBody.querySelector('.long-text');
-
-      const isExpanded = !longText.classList.contains('d-none');
+      const isExpanded = !longText.classList.contains("d-none");
 
       if (isExpanded) {
-        longText.classList.add('d-none');
-        shortText.classList.remove('d-none');
-        btn.textContent = 'Ver más';
+        longText.classList.add("d-none");
+        shortText.classList.remove("d-none");
+        btn.textContent = "Ver más";
       } else {
-        longText.classList.remove('d-none');
-        shortText.classList.add('d-none');
-        btn.textContent = 'Ver menos';
+        longText.classList.remove("d-none");
+        shortText.classList.add("d-none");
+        btn.textContent = "Ver menos";
       }
     });
   });
 });
-
-
 
 function verPeligros() {
   window.location.href = "#Riesgos";
@@ -101,17 +95,29 @@ function verConfiguracion() {
   window.location.href = "configuracion-redes.html";
 }
 
+document.querySelectorAll(".toggle-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".icon-box");
+    const shortText = card.querySelector(".short-text");
+    const longText = card.querySelector(".long-text");
 
+    shortText.classList.toggle("d-none");
+    longText.classList.toggle("d-none");
 
-  document.querySelectorAll('.toggle-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const card = btn.closest('.icon-box');
-      const shortText = card.querySelector('.short-text');
-      const longText = card.querySelector('.long-text');
-
-      shortText.classList.toggle('d-none');
-      longText.classList.toggle('d-none');
-
-      btn.textContent = btn.textContent === 'Ver más' ? 'Ver menos' : 'Ver más';
-    });
+    btn.textContent = btn.textContent === "Ver más" ? "Ver menos" : "Ver más";
   });
+});
+
+
+
+
+
+
+
+document.addEventListener('click', e => {
+  const card = e.target.closest('.flip-card');
+  if (!card) return;
+  document.querySelectorAll('.flip-card.is-flipped')
+    .forEach(c => c !== card && c.classList.remove('is-flipped'));
+  card.classList.toggle('is-flipped');
+});

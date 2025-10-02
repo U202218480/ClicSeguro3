@@ -14,6 +14,85 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .carousel-fullscreen {
+            padding-top: 90px;
+            /* mismo valor que el navbar */
+        }
+
+        .carousel-fullscreen,
+        .carousel-item,
+        .carousel-item img {
+            height: 100vh;
+            object-fit: fill;
+            object-position: center;
+        }
+
+        .carousel-fade .carousel-item {
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-fullscreen .carousel-item img {
+                object-fit: fill;
+                width: 100%;
+                height: 100vh;
+
+            }
+
+            .carousel-caption {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+        }
+
+
+        .carousel-seccion .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-seccion .carousel-item img {
+                height: 250px;
+            }
+        }
+
+
+
+
+
+        #denuncia .carousel-indicators [data-bs-target] {
+            background-color: #004d4d;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+
+        .carousel-denuncia,
+        .carousel-item,
+        .carousel-item .denuncias {
+            height: 85vh !important;
+            object-fit: fill !important;
+            object-position: center !important;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -84,276 +163,177 @@
         </div>
     </nav>
 
-    <header class="carousel vh-100 d-flex align-items-center">
-        <div id="heroCarousel" class="carousel slide w-100 h-100" data-bs-ride="carousel">
-            <div class="carousel-inner h-100">
-                <!-- Slide 1 -->
-                <div class="carousel-item active h-100 ch-item">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center justify-content-center text-center text-md-start">
-                            <div class="col-md-6" data-aos="fade-right"> <img src="Iconos e imagenes/SLIDER-1.webp"
-                                    alt="Ilustración Clic Seguro" class="img-fluid rounded img-carousel" /> </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="carousel-item h-100 ch-item">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center justify-content-center text-center text-md-start">
-                            <div class="col-md-6" data-aos="fade-right"> <img src="Iconos e imagenes\SLIDER-2.webp"
-                                    alt="Redes Sociales Estadisticas" class="img-fluid rounded img-carousel" /> </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="carousel-item h-100 ch-item">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center justify-content-center text-center text-md-start">
-                            <div class="col-md-6" data-aos="fade-right"> <img src="Iconos e imagenes\SLIDER-3.webp"
-                                    alt="Estadísticas" class="img-fluid rounded img-carousel" /> </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 4 -->
-                <div class="carousel-item h-100 ch-item">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center justify-content-center text-center text-md-start">
-                            <div class="col-md-6" data-aos="fade-right"> <img src="Iconos e imagenes\SLIDER-4.webp"
-                                    alt="Seguridad Digital" class="img-fluid rounded img-carousel" /> </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Controles -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span> </button> <button class="carousel-control-next"
-                type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span> </button>
-        </div>
-        </div>
-    </header>
 
+    <div id="carouselCHS" class="carousel slide carousel-fade carousel-fullscreen" data-bs-ride="carousel-fullscreen">
+        <div class="carousel-inner">
 
-    <section class="riesgos-section py-5 bg-light">
-        <div class="container">
-            <h2 id="Riesgos" class="titulo4 mb-4 texto" style="padding-top: 105px; font-weight: bold"
-                data-es="RIESGOS EN LíNEA QUE DEBES CONOCER" data-es="INFORMACIÓN DE RIESGO"
-                data-tic="AUNCÜMAXÜ I LÍNEA NÜXÜ̃ CU CUXAXÜ̃" data-kuk="" data-mat="MINBI ISAMBO ICQUID TANTIATE"
-                data-mur="RIESGOS EN ATONA QUE DEBE CONOCER">RIESGOS EN LíNEA QUE DEBES CONOCER</h2>
-            <div class="row g-4">
-                <div class="col-md-3 col-sm-6">
-                    <div class="card custom-card sr-card">
-                        <div class="card-img-wrapper">
-                            <img src="Iconos e imagenes/grooming_icono.png" alt="Grooming"
-                                class="card-img-top img-fluid" />
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center">Sexting</h5>
-                            <p class="card-text short-text text-center">¿Qué es el Sexting?</p>
-
-
-                            <p class="card-text texto long-text d-none"
-                                data-es="“¿Proposiciones a NNA con fines sexuales?”. Es cuando un adulto establece una relación mediante internet con niñas, niños o adolescentes (NNA) para intercambiar mensajes sexuales, concretar encuentros sexuales, entre otros fines."
-                                data-tic="'Proposicionesgü a NNA con finegü chixe marexü̃' ngexgumarüxü̃ wuxi duxuxü̃ yaxü̃ internetwa na Aarüaxgüx i buxe ngexe yatüxe u adelescentemax (NNA) rü ore rü naxchicünaxa i chixegümarexü rü taama tama megüxü"
-                                data-kuk=""
-                                data-mat="Champi chedo internet dën isambo dadabëd iquec mensajen onquec isambobi iquenda. Adenbidi mibi bedcaidën isambobi matses ichome cac nidmeslaunenda"
-                                data-mur="“Proposiciones a NNA con fines sexuales”. Es cuando un eimɨe establece una relación mediante Internet con rɨñoisaɨaɨ, ɨisaɨaɨ, jitokomɨnɨaɨ (NNA) para intercambiar llote o joreño sexuales, concretar encuentros sexuales, entre otros fines.">
-                                Proposiciones a NNA con fines sexuales. Es cuando un adulto establece una relación
-                                mediante internet con niñas, niños o adolescentes (NNA) para intercambiar mensajes
-                                sexuales, concretar encuentros sexuales, entre otros fines.
-                            </p>
-
-                            <button class="btn btn-outline-light mt-auto toggle-btn">Ver más</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="card h-100 custom-card sr-card">
-                        <div class="card-img-wrapper">
-                            <img src="Iconos e imagenes\sexting_icono.png" alt="Sexting"
-                                class="card-img-top img-fluid" />
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center">Sexting</h5>
-                            <p class="card-text short-text text-center">¿Qué es el Sexting?</p>
-
-
-                            <p class="card-text texto long-text d-none" data-es="Intercambio de mensajes sexuales. Es cuando niñas, niños y
-                                adolescentes comparten
-                                mensajes sexualmente explícitos o imágenes sexuales autogeneradas por ellos."
-                                data-tic="“Oregü i tümaüne arü tama mexü̃.” Rü ngexguma buxe ngexe, yatüxe u adolescente tama compartegü i tumaünearü nguchaxü i chixegüxü̃ rü naxchicünaxagü."
-                                data-kuk=""
-                                data-mat="Utsi utsibëdquio onquequin chomied dadabëd iquec nëid ted Bacuëbo, champibo, canicuentsaido. Nibëd icte bunquidën mibi ubi min bedcaid chome"
-                                data-mur="“Intercambio de llote sexuales”. Es cuando NNA comparten llote sexualmente explícitos o joreño sexuales autogeneradas por naimakɨ.">
-                                Intercambio de mensajes sexuales. Es cuando niñas, niños y
-                                adolescentes comparten
-                                mensajes sexualmente explícitos o imágenes sexuales autogeneradas por ellos.</p>
-
-                            <button class="btn btn-outline-light mt-auto toggle-btn">Ver más</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="card h-100 custom-card sr-card">
-                        <div class="card-img-wrapper">
-                            <img src="Iconos e imagenes\masnna_icono.png" alt="MASNA" class="card-img-top img-fluid" />
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center">MASNNA</h5>
-                            <p class="card-text short-text text-center">¿Qué es el MASNNA?</p>
-
-
-                            <p class="card-text texto long-text d-none"
-                                data-es="“Intercambio de llote sexuales”. Es cuando NNA comparten llote sexualmente explícitos o joreño sexuales autogeneradas por naimakɨ."
-                                data-tic="Materialgü i chixegümarexü̃ i naü̃ne arü nguchaxü̃gü i buxe i ngexe rü yatüxe u adolescente. Toāeü nüxü̃  i faxü̃tax ngexgumarüxü̃ pornografia i baxecax guũma ñaãgü rü chixegümarexnü nixĩ."
-                                data-kuk=""
-                                data-mat="Adenbidi dadabëd icquin champi, bawëbo, caniabo. Adecbidi chudadquin bedcaid isenquio icquin Bacuëbo yec quequin"
-                                data-mur="“Material de abuso sexual de rɨnoisaɨaɨ, ɨisaɨaɨ, jitokomɨnɨaɨ”. También conocido como “pornografía infantil” (uerillakɨno). Es toda representación de actividades sexuales explícitas, uakoni o simuladas, o de los genitales de NNA con fines sexuales (con o sin fines de lucro). Incluye la producción, tráfico, lluakɨno, feka ja, eenuano del material.">
-                                Material de abuso sexual de niñas, niños o adolescentes. También
-                                conocido como “pornografía infantil”. Es toda representación de actividades sexuales
-                                explícitas,
-                                reales o simuladas, o de los genitales de niñas, niños o adolescentes con fines sexuales
-                                (con o sin fines de lucro). Incluye la producción, tráfico, difusión, venta o
-                                almacenamiento de material.</p>
-
-                            <button class="btn btn-outline-light mt-auto toggle-btn">Ver más</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="card h-100 custom-card sr-card">
-                        <div class="card-img-wrapper">
-                            <img src="Iconos e imagenes\sextorcion_icono.png" alt="Sextorcion"
-                                class="card-img-top img-fluid" />
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center">Extorsión Sexual</h5>
-                            <p class="card-text short-text text-center">¿Qué es la Extorsión Sexual?</p>
-
-
-                            <p class="card-text texto long-text d-none" data-es="Chantaje sexual. Es cuando se extorsiona a una niña, niño o adolescentes bajo la amenaza
-                                de compartir imágenes u otros contenidos sexuales de la víctima sin su consentimiento
-                                para obtener retribuciones sexuales, dinero o cualquier otro beneficio de la víctima."
-                                data-tic="Dexagü i  müxeērüxü i naüne arü nguchaxü̃gü Buxü̃gü i yaxü̃gü ñuxã chi naxtüwa i tüxüwa i tüxü i nbaixgü torü dierü loxgü benefisiogux rü maxã"
-                                data-kuk=""
-                                data-mat="Adecbidi mibi isambo icqui dën choca cac nidenquio mibi piuequid menenu quequin chedonbo chiec mibi"
-                                data-mur="“Jɨfuia sexual”. Es cuando se extorsiona a un NNA bajo jakɨouano de compartir joreño u otros contenidos sexuales de la víctima sin su naiño jitaiñede para obtener retribuciones sexuales, ukube o cualquier otro beneficio de la víctima.">
-                                Chantaje sexual. Es cuando se extorsiona a una niña, niño o adolescentes bajo la amenaza
-                                de compartir imágenes u otros contenidos sexuales de la víctima sin su consentimiento
-                                para obtener retribuciones sexuales, dinero o cualquier otro beneficio de la víctima.
-                            </p>
-
-                            <button class="btn btn-outline-light mt-auto toggle-btn">Ver más</button>
-                        </div>
-                    </div>
-                </div>
+            <!-- Slide 1: Imagen institucional CHS -->
+            <div class="carousel-item active">
+                <img src="Iconos e imagenes/SLIDER-1.webp" class="d-block w-100" alt="Campaña CHS Alternativo">
             </div>
 
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="Iconos e imagenes/SLIDER-2.webp" class="d-block w-100" alt="Imagen 2">
+            </div>
 
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="Iconos e imagenes/SLIDER-3.webp" class="d-block w-100" alt="Imagen 3">
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <img src="Iconos e imagenes/SLIDER-4.webp" class="d-block w-100" alt="Imagen 4">
+            </div>
         </div>
-    </section>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCHS" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselCHS" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
 
 
-    <section class="mt-5 mb-5">
-        <div class="container mt-5">
-            <h2 id="Ruta-denuncia" class="titulo1 mb-4 texto" style="padding-top: 105px; font-weight: bold"
-                data-es="RUTA DE DENUNCIA" data-tic="RUTA UWAN ARÜ" data-kuk=""
-                data-mat="CHUIUIDO BËTAN ADQUID DENUNCIAUAQUIN" data-mur="NAɨ DE LLOGɨDUA">
-                RUTA DE DENUNCIA
-            </h2>
+<section class="riesgos-section py-5">
+  <div class="container">
+    <h2 class="mb-4 fw-bold text-center text-white" style="color: #1c267a;">RIESGOS EN LÍNEA QUE DEBES CONOCER</h2>
 
-            <div class="row">
-                <!-- Identifica -->
-                <div class="col-md-4 mb-4" data-aos="fade-right">
-                    <div class="icon-box text-light p-4 rounded text-center">
-                        <h4 class="titulo1 texto" data-es="Identifíca" data-tic="Nangugü" data-kuk=""
-                            data-mat="Bëyuc isquin tsuda nec quequin tantiaquin" data-mur="Identifica">
-                            Identifíca
-                        </h4>
+    <div class="row g-4">
+      <!-- CARD 1 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="flip-card">
+          <div class="flip-inner">
+            <!-- Frente (imagen) -->
+            <div class="flip-face flip-front">
+              <img src="Iconos e imagenes/Cards/extorsion.png" alt="Extorsión sexual">
+            </div>
+            <!-- Reverso (contenedor del mismo color/tamaño con texto) -->
+            <div class="flip-face flip-back">
+              <div class="back-content">
+                <h5 class="mb-2">Extorsión sexual</h5>
+                <p class="mb-0">Chantaje con fotos o videos para obtener dinero, favores o más contenido. Guarda evidencias y no pagues.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                        <img src="Iconos e imagenes/identifica_acciones.png" alt="Identifica"
-                            class="img-fluid mb-3 icon-img">
+      <!-- CARD 2 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <img src="Iconos e imagenes/Cards/grooming.png" alt="Grooming">
+            </div>
+            <div class="flip-face flip-back">
+              <div class="back-content">
+                <h5 class="mb-2">Grooming</h5>
+                <p class="mb-0">Un adulto se gana la confianza de NNA en línea para fines sexuales. Desconfía y reporta.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                        <img src="Iconos e imagenes/audio_icono.png" alt="Reproducir audio"
-                            style="width: 30px; cursor: pointer;" onclick="playAudio('audio_identifica')">
+      <!-- CARD 3 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <img src="Iconos e imagenes/Cards/MASNNA.png" alt="MASNNA">
+            </div>
+            <div class="flip-face flip-back">
+              <div class="back-content">
+                <h5 class="mb-2">MASNNA</h5>
+                <p class="mb-0">Material de abuso sexual de niñas, niños o adolescentes. Producir o compartir es delito.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                        <p class="texto1 texto icon-text"
-                            data-es="Reconoce una conducta inadecuada hacia un menor de edad y avisa a tus padres o a algún adulto de suma confianza."
-                            data-tic="Nüxu cu daüxgüx wuxi nacuma tama mexü wüxi buxũma rü cuna tügümaxã nuxü̃ iu rexma wüxie yaxe tana cua puxemaã"
-                            data-kuk=""
-                            data-mat="Tantiaquin tsuda tsiuec seta ictsëcquidi nec quequin isquin, adshun aton papan tantiashunec iquec"
-                            data-mur="Faɨriote una conducta maraiñede hacia una janosa, llono o moomo iemo kome eimɨemo, uiñogamɨe">
-                            Reconoce una conducta inadecuada hacia un menor de edad y avisa a tus padres o
-                            a algún adulto de suma confianza.
-                        </p>
-                    </div>
-                    <audio id="audio_identifica" src="Iconos e imagenes/Audios/13/audio_identifica.mp3"></audio>
+      <!-- CARD 4 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <img src="Iconos e imagenes/Cards/sexting.png" alt="Sexting">
+            </div>
+            <div class="flip-face flip-back">
+              <div class="back-content">
+                <h5 class="mb-2">Sexting</h5>
+                <p class="mb-0">Intercambio de mensajes o imágenes íntimas. Cuida con quién compartes y configura tu privacidad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+    <section id="denuncia" class="w-100 d-flex align-items-center">
+        <div class="container-fluid" style="padding: 0px !important;">
+            <div class="row  g-0"> <!-- g-0 elimina gutters (márgenes entre columnas) -->
+
+                <!-- Columna izquierda -->
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center">              
+                    <h2 id="Ruta-denuncia" class="titulo1 mb-3 fw-bold texto" style="padding-top: 105px; font-weight: bold"
+                        data-es="RUTA DE DENUNCIA" data-tic="RUTA UWAN ARÜ" data-kuk=""
+                        data-mat="CHUIUIDO BËTAN ADQUID DENUNCIAUAQUIN" data-mur="NAɨ DE LLOGɨDUA" data-aos="fade-right">
+                        RUTA DE DENUNCIA
+                    </h2>
+                    <img src="Iconos e imagenes/rojo.png" alt="Denuncia" class="img-fluid" data-aos="zoom-in"  data-aos-delay="300">
                 </div>
 
-                <!-- ¿Dónde denunciar? -->
-                <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <div class="icon-box text-light p-4 rounded text-center">
-                        <h4 class="titulo1 texto" data-es="¿Dónde denunciar?" data-tic="¿ngexta inauwan?"
-                            data-kuk="¿Haka denunciar?" data-mat="Midashunquio icsambo icquid nate bune"
-                            data-mur="¿Nɨnomo llogɨdoite?">¿Dónde denunciar?</h4>
+                <!-- Columna derecha -->
+                <div class="col-12 col-md-8">
+                    <div id="denunciaCarousel" class="carousel slide  carousel-denuncia"
+                        data-bs-ride="carousel-denuncia">
 
-                        <img src="Iconos e imagenes/donde_denunciar.png" alt="¿Dónde denunciar?"
-                            class="img-fluid mb-3 icon-img">
+                        <!-- Slides -->
+                        <div class="carousel-inner ">
+                            <div class="carousel-item active ">
+                                <img src="Iconos e imagenes/slider-denuncia-1.webp" class="d-block w-100 denuncias"
+                                    alt="Imagen 1">
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="Iconos e imagenes/slider-denuncia-2.webp" class="d-block w-100 denuncias"
+                                    alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="Iconos e imagenes/slider-denuncia-3.webp" class="d-block w-100 denuncias"
+                                    alt="Imagen 3">
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="Iconos e imagenes/slider-denuncia-4.webp" class="d-block w-100 denuncias"
+                                    alt="Imagen 4">
+                            </div>
+                        </div>
 
-                        <!-- Texto corto -->
-                        <p class="texto1 mt-3 texto icon-text short-text">
-                            Los canales de denuncia inmediatos incluyen la Línea 1818 del MININTER, la Línea 100 del
-                            MIMP y la Línea ANNA 1810 del MIMP para violencia contra niñas, niños y adolescentes...
-                        </p>
+                        <!-- Indicadores -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#denunciaCarousel" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#denunciaCarousel" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#denunciaCarousel" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#denunciaCarousel" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                        </div>
 
-                        <!-- Texto largo oculto -->
-                        <p class="texto1 mt-3 texto icon-text long-text d-none"
-                            data-es="Los canales de denuncia inmediatos incluyen la Línea 1818 del MININTER para casos de trata de personas, la Línea 100 del MIMP para violencia contra niñas, niños y adolescentes, y la Línea ANNA 1810 del MIMP que brinda atención oportuna ante violencia o desprotección familiar, además de la posibilidad de acudir a la comisaría o fiscalía más cercana. Las denuncias pueden realizarse de forma presencial, virtual o mediante llamada telefónica."
-                            data-tic="Uwancax ru comisariwa naũ u fiscaliwa cuxcax inangaicamaü̃wa, virtual ãcütax name i uwante y ngexmatacagü. Linea 1818 - MININTER (trata de personas), Linea 1810 - Minesterio i ngexearü vulnarables..."
-                            data-kuk=""
-                            data-mat="Icsambuen nate buquin nidec chuiquido yacno, Nidec podo canëshanquid chedo chuiquin..."
-                            data-mur="">
-                            Los canales de denuncia inmediatos incluyen la Línea 1818 del MININTER para casos de trata
-                            de personas, la Línea 100 del MIMP para violencia contra niñas, niños y adolescentes, y la
-                            Línea ANNA 1810 del MIMP que brinda atención oportuna ante violencia o desprotección
-                            familiar, además de la posibilidad de acudir a la comisaría o fiscalía más cercana. Las
-                            denuncias pueden realizarse de forma presencial, virtual o mediante llamada telefónica.
-                        </p>
-
-                        <!-- Botón ver más -->
-                        <button class="btn btn-outline-light mt-3 toggle-btn">Ver más</button>
                     </div>
                 </div>
 
-                <!-- Comunícate -->
-                <div class="col-md-4 mb-4" data-aos="fade-left">
-                    <div class="icon-box text-light p-4 rounded text-center">
-                        <h4 class="titulo1 texto" data-es="Comunícate" data-tic="dexagü" data-kuk="Isapuki"
-                            data-mat="Onqueta" data-mur="Llono">Comunícate</h4>
-
-                        <img src="Iconos e imagenes/comunicate_con_nosotros.png" alt="Comunícate"
-                            class="img-fluid mb-3 icon-img">
-
-                        <img src="Iconos e imagenes/audio_icono.png" alt="Reproducir audio"
-                            style="width: 30px; cursor: pointer;" onclick="playAudio('audio_Comunicate')">
-
-                        <p class="texto1 texto icon-text"
-                            data-es="CHS Alternativo acompaña y apoya a las denuncias a través del Centro de Atención y Orientación Legal y Psicosocial. La atención y la orientación son gratuitas las 24 horas a través del número"
-                            data-tic="guxũma rü na ngetanü rü 24 horas rü nagu ta cagüya daa númerpo" data-kuk=""
-                            data-mat="Nashumënquid yacno nidec: Abitedi uëshë yacno onquenum chuiquin"
-                            data-mur="CHS Alternativo acompaña y apoya a las llogɨdua a través del Centro de Asistencia y Orientación Legal y Psicosocial (CALP). La atención y la orientación son gratuitas las 24 horas a través del número">
-                            CHS Alternativo acompaña y apoya a las denuncias a través del Centro de
-                            Atención y Orientación Legal y Psicosocial. La atención y la orientación son gratuitas las
-                            24 horas a través del número
-                        </p>
-
-                        <h5 class="texto2">+51 945 092 929</h5>
-                    </div>
-                    <audio id="audio_Comunicate" src="Iconos e imagenes/Audios/13/audio_comunicate.mp3"></audio>
-                </div>
             </div>
         </div>
     </section>

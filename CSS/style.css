@@ -612,65 +612,6 @@ body{
 
 
 
-
-
-
-
-/* Aumentar el tamaño del carrusel para que ocupe toda la pantalla */
-#heroCarousel {
-    width: 100%;
-    height: 100vh; /* Hacer que el carrusel ocupe toda la altura de la ventana */
-    margin: 0 auto; /* Centrar el carrusel */
-}
-
-/* Asegurar que el contenedor interno ocupe toda la altura del carrusel */
-.carousel-inner {
-    height: 100%; /* Ocupa toda la altura disponible */
-}
-
-/* Hacer que las imágenes del carrusel ocupen toda la pantalla */
-.carousel-item img {
-    width: 100%; /* Las imágenes ocupan todo el ancho del carrusel */
-    height: 100%; /* Las imágenes ocupan toda la altura del carrusel */
-    object-fit: cover; /* Asegura que las imágenes cubran el área disponible sin distorsionar */
-    border-radius: 0; /* Sin bordes redondeados para que ocupe todo el espacio */
-}
-
-/* Ajustar la alineación y espaciado de las columnas */
-.carousel-item .col-md-6 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Reducir el espaciado de los laterales dentro del contenedor */
-.carousel-item .container {
-    padding: 0; /* Eliminar el espaciado lateral */
-    max-width: 100%; /* Asegurar que el contenedor ocupe todo el ancho disponible */
-}
-
-/* Estilo para los controles del carrusel */
-.carousel-control-prev, .carousel-control-next {
-    color: #fff;
-    font-size: 2rem; /* Mayor tamaño de los controles */
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    filter: invert(100%);
-}
-
-/* Media query para pantallas más pequeñas */
-@media (max-width: 767px) {
-    .carousel-inner {
-        height: 60vh; /* Reducir la altura en pantallas pequeñas */
-    }
-
-    .carousel-item img {
-        max-height: 400px; /* Reducir la altura máxima de las imágenes */
-    }
-}
-
-
   
 
 .custom-card {
@@ -700,3 +641,95 @@ body{
     .icon-img{ width: 200px; height: 150px; }
     .icon-text{ max-width: 200px; }
   }
+
+
+
+
+
+
+  
+  /* Asegurar que las imágenes se ajusten correctamente */
+#heroCarousel .carousel-item img {
+    height: 100%; /* Las imágenes ocupan todo el ancho */
+    width: auto; /* Mantener la proporción */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Fondo de la sección (opcional) */
+.riesgos-section { background:#f0815f; }
+.riesgos-section h2 { color:#1c267a; }
+
+/* ====== Flip Cards ====== */
+.flip-card{
+  --card-bg: #f0815f;     /* color del cuadro del reverso */
+  --card-radius: 16px;
+  --card-h: 420px;
+
+  perspective: 1200px;
+  height: var(--card-h);
+}
+
+.flip-inner{
+  position: relative;
+  width: 100%; height: 100%;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
+  background: var(--card-bg);
+}
+
+/* CARAS */
+.flip-face{
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform .8s cubic-bezier(.2,.8,.2,1);
+  border-radius: var(--card-radius);
+}
+
+/* Frente: imagen llena, sin voltearse por defecto */
+.flip-front{
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+.flip-front img{
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  border-radius: var(--card-radius);
+}
+
+/* Reverso: panel del mismo tamaño y color con texto */
+.flip-back{
+  transform: rotateY(180deg);      /* queda “del otro lado” inicialmente */
+  background: var(--card-bg);
+  color: #eaf6f8;
+  padding: 20px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; line-height: 1.35;
+}
+.flip-back h5{ color:#fff; font-weight:700; margin-bottom:.5rem; }
+.flip-back p{ max-width: 90%; margin:0; }
+
+/* ESTADO GIRADO (hover en desktop o clase .is-flipped en móvil) */
+.flip-card:hover .flip-front,
+.flip-card.is-flipped .flip-front{
+  transform: rotateY(180deg);
+}
+.flip-card:hover .flip-back,
+.flip-card.is-flipped .flip-back{
+  transform: rotateY(360deg);  /* vuelve a 0 pero dando la vuelta completa */
+}
+
+/* Responsivo */
+@media (max-width:576px){
+  .flip-card{ --card-h: 360px; }
+}
