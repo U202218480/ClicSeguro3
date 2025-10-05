@@ -1,3 +1,4 @@
+
 .navbar-custom {
     background-color: #91c7ce;
     /* Color turquesa */
@@ -411,10 +412,53 @@ footer ul li a:hover {
   transform: scale(1.2);
 }
 */
-.riesgos-section .card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
+/* ---- ¡MUY IMPORTANTE! (desktop compacto) ---- */
+@media (min-width: 992px){
+  .important-section .container{
+    max-width: 980px;      /* antes 1140/1320 en Bootstrap */
+  }
 }
+
+/* Gutters más pequeños */
+.important-section .row{
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1.25rem;
+}
+
+/* Tarjeta compacta */
+.important-section .card{
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 260px;       /* baja la altura total */
+}
+
+.important-section .card-body{
+  padding: 16px;           /* antes 24px (p-3/p-4) */
+}
+
+.important-section .card-body img{
+  width: 72px;             /* antes 100px */
+  height: 72px;
+}
+
+.important-section .autoeval-title{   /* h4 */
+  font-size: 1.1rem;       /* antes ~1.25rem */
+  margin-bottom: .25rem;
+}
+
+.important-section .card-body p{
+  font-size: .95rem;
+  margin-bottom: .5rem;
+}
+
+/* Botón un poco más chico */
+.important-section .toggle-btn{
+  padding: .4rem .9rem;
+  font-size: .95rem;
+}
+
+/* Evitar cualquier desborde lateral */
+.important-section{ position: relative; overflow-x: clip; }
 
 
 .custom-card {
@@ -729,7 +773,19 @@ body{
   transform: rotateY(360deg);  /* vuelve a 0 pero dando la vuelta completa */
 }
 
-/* Responsivo */
-@media (max-width:576px){
-  .flip-card{ --card-h: 360px; }
+/* Asegura que la tarjeta tenga altura fija */
+.flip-card{
+  position: relative;
+  height: var(--card-h, 420px);
+}
+
+/* En móvil: mostrar la imagen completa */
+@media (max-width: 576px){
+  .flip-card{ --card-h: 450px; }              /* puedes subir/bajar este valor */
+  .flip-front{ background: #0f5d83; }         /* color de fondo para las bandas */
+  .flip-front img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;                      /* <-- clave para que no se corte */
+  }
 }
