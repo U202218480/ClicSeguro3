@@ -1,3 +1,8 @@
+:root {
+    --nav-h: 120px; /* altura del navbar fijo; ajusta si tu navbar es más grande/pequeño */
+    --nav-offset: 0px;
+    --site-nav-h: 120px; /* usado por reglas añadidas previamente */
+}
 
 .navbar-custom {
     background-color: #91c7ce;
@@ -305,6 +310,16 @@ footer ul li a:hover {
     /* Garantiza que la imagen no se desborde fuera de su contenedor */
     height: auto;
     /* Mantiene la proporción original de la imagen */
+}
+
+/* Imagen CSF responsiva y centrada en cuestionario */
+.responsive-csf {
+    width: 100%;
+    max-width: 620px; /* ajusta el tamaño máximo según prefieras */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Espacio adicional después de los botones y antes del footer */
@@ -691,6 +706,7 @@ body{
 
 
 
+
   
   /* Asegurar que las imágenes se ajusten correctamente */
 #heroCarousel .carousel-item img {
@@ -730,7 +746,6 @@ body{
   box-shadow: 0 12px 30px rgba(0,0,0,.25);
   background: var(--card-bg);
 }
-
 /* CARAS */
 .flip-face{
   position: absolute; inset: 0;
