@@ -18,9 +18,7 @@
     background-color: #FF7043;
 }
 
-.Container2 {
-    background-color: #007e89;
-}
+
 
 .Container3 {
     background-color: #91c7ce;
@@ -210,24 +208,8 @@ footer ul li a:hover {
     flex: 1;
 }
 
-/* Target the accordion button when it's expanded */
-.accordion-button:not(.collapsed) {
-    background-color: #007e89;
-    color: white;
-}
 
-/* Optional: Add a different background color for collapsed accordion button */
-.accordion-button.collapsed {
-    background-color: #f8f9fa;
-}
 
-.carousel-control-prev-icon {
-    background-color: #007e89;
-}
-
-.carousel-control-next-icon {
-    background-color: #007e89;
-}
 
 /**/
 /* Cambiar el color del borde de las tarjetas */
@@ -804,3 +786,31 @@ body{
     object-fit: contain;                      /* <-- clave para que no se corte */
   }
 }
+
+
+
+
+
+
+
+
+/* Barra de título full-width (sin bordes redondeados) */
+.important-title{
+  width:100%;
+  padding:16px 0;         /* alto de la franja */
+}
+.important-title h1{
+  margin:0;
+  text-align:center;
+  color:#c1121f;          /* color del texto */
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+/* opcional: más compacto en móvil */
+@media (max-width:575.98px){
+  .important-title{ padding:12px 0; }
+  .important-title h1{ font-size:1.5rem; }
+}
+

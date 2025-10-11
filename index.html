@@ -434,39 +434,44 @@
     </div>
   </section>
 
-  <section class="important-section container-fluid px-0">
-    <h1 class="text-center text-danger fw-bold mb-5" data-aos="fade-down">
-      MUY IMPORTANTE
-    </h1>
+  <!-- Título a todo el ancho, fuera de container -->
+<section class="important-title" aria-labelledby="imp-title">
+  <h1 id="imp-title">MUY IMPORTANTE</h1>
+</section>
+<!-- Sección IMPORTANTE (sin título y sin contenedor) -->
+<section class="important-section">
 
-    <!-- Segundo bloque -->
-    <div class="row align-items-center flex-md-row-reverse row g-0">
-      <!-- Derecha: imagen + botón -->
-      <div class="col-md-6 text-center" data-aos="fade-right">
-        <img src="Iconos e imagenes/configuracion-icon.png" alt="Imagen derecha 2" />
-        <button class="btn btn-custom mt-3">APRENDE AQUÍ</button>
+  <!-- BLOQUE A -->
+  <div class="important-block block-a">
+    <div class="row align-items-center g-3 g-md-0">
+      <!-- Col 1: icono + botón -->
+      <div class="col-12 col-md-6 text-center" data-aos="fade-right">
+        <img class="img-icon" src="Iconos e imagenes/autoevaluacion-icon.png" alt="Icono autoevaluación">
+        <button class="btn btn-cta mt-3">CONTINUAR</button>
       </div>
-
-      <!-- Izquierda: imagen fullscreen -->
-      <div class="col-md-6" data-aos="fade-left">
-        <img src="Iconos e imagenes/configuracion-figura.png" alt="Imagen izquierda 2" />
-      </div>
-    </div>
-
-    <!-- Primer bloque -->
-    <div class="row align-items-center mb-5 row g-0">
-      <!-- Izquierda: imagen + botón -->
-      <div class="col-md-6 text-center" data-aos="fade-right">
-        <img src="Iconos e imagenes/autoevaluacion-icon.png" alt="Imagen izquierda 1" />
-        <button class="btn btn-custom mt-3">CONTINUAR</button>
-      </div>
-
-      <!-- Derecha: imagen fullscreen -->
-      <div class="col-md-6" data-aos="fade-left">
-        <img src="Iconos e imagenes/autoevaluacion-figura.png" alt="Imagen derecha 1" />
+      <!-- Col 2: figura -->
+      <div class="col-12 col-md-6" data-aos="fade-left">
+        <img class="img-figure" src="Iconos e imagenes/autoevaluacion-figura.png" alt="Figura autoevaluación">
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- BLOQUE B -->
+  <div class="important-block block-b">
+    <div class="row align-items-center flex-md-row-reverse g-3 g-md-0">
+      <!-- Col 1: icono + botón -->
+      <div class="col-12 col-md-6 text-center" data-aos="fade-right">
+        <img class="img-icon" src="Iconos e imagenes/configuracion-icon.png" alt="Icono configuración">
+        <button class="btn btn-cta mt-3">APRENDE AQUÍ</button>
+      </div>
+      <!-- Col 2: figura -->
+      <div class="col-12 col-md-6" data-aos="fade-left">
+        <img class="img-figure" src="Iconos e imagenes/configuracion-figura.png" alt="Figura configuración">
+      </div>
+    </div>
+  </div>
+
+</section>
 
 
 

@@ -224,12 +224,6 @@ mark {
     }
   }
   
-  .important-section {
-
-    padding: 20px;
-    /*border-radius: 8px;*/
-    background-color: #137e88de;/*#137e88;*/
-}
 
       .important-section img {
       max-width: 100%;
@@ -312,3 +306,107 @@ mark {
       font-size: 0.95rem;
     }
   }
+
+
+
+
+  
+/* ====== Important Section ====== */
+.important-section{ width:100%; }
+
+/* Bloques con colores distintos y bordes rectos */
+.important-block{ padding: 32px 12px; }
+.block-a{ background:#91c7ce; }   /* azul claro — cámbialo si quieres */
+.block-b{ background:#00757E; }   /* durazno claro — cámbialo si quieres */
+
+/* Imágenes sin redondeo y fluidas */
+.important-section img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:0;
+}
+
+/* Icono más compacto, centrado */
+.img-icon{
+  max-width:380px;   /* ajusta al gusto */
+  margin-inline:auto;
+}
+
+/* Botón grande, táctil, con hover */
+.btn-cta{
+  border-radius:10;
+  padding:12px 28px;
+  font-weight:700;
+  letter-spacing:.4px;
+  background:#222;
+  color:#fff;
+  border:2px solid #222;
+  transition:transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn-cta:hover,
+.btn-cta:focus-visible{
+  background:#ffffff;      /* <-- color hover */
+  color:#000000;              /* texto en hover */
+  border-color:#ffffff;    /* borde en hover */
+  transform:translateY(-1px);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 575.98px){
+  .important-block{ padding: 20px 14px; }
+
+  /* Asegura aire vertical entre columnas apiladas */
+  .important-block .row > [class*="col-"] + [class*="col-"]{
+    margin-top: 8px;
+  }
+
+  /* Botón a ancho automático pero cómodo */
+  .btn-cta{ padding:12px 22px; }
+
+  /* Icono un poco más pequeño para pantallas chicas */
+  .img-icon{ max-width: 72vw; }
+}
+
+/* Opcional: limitar el ancho máximo en desktop para que no “estiren” de más */
+@media (min-width: 992px){
+  .important-block .row{
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+}
+
+
+
+
+
+
+/* Barra de título full-width (sin bordes redondeados) */
+.important-title{
+  width:100%;
+  padding:16px 0;         /* alto de la franja */
+}
+.important-title h1{
+  margin:0;
+  text-align:center;
+  color:#c1121f;          /* color del texto */
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+/* opcional: más compacto en móvil */
+@media (max-width:575.98px){
+  .important-title{ padding:12px 0; }
+  .important-title h1{ font-size:1.5rem; }
+}
+
+
+.important-block.important-block.block-a{
+
+  background:#91c7ce;  /* azul oscuro - cámbialo si quieres */
+}
+
+.important-block.block-b{
+  background:#00757E;  /* azul oscuro - cámbialo si quieres */
+}
