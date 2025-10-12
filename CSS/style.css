@@ -574,7 +574,7 @@ footer ul li a:hover {
 
 body { 
   background-image: url('../Iconos e imagenes/tema_tapiz.webp') !important;
-  background-size: 500px auto !important; /* ajusta 200px a lo que necesites */
+  background-size:  auto !important; /* ajusta 200px a lo que necesites */
   background-repeat: repeat !important;   /* se repite en mosaico */
   background-position: center top !important;
   background-attachment: fixed !important;

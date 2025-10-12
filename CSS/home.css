@@ -410,3 +410,35 @@ mark {
 .important-block.block-b{
   background:#00757E;  /* azul oscuro - cámbialo si quieres */
 }
+/* Hace que el bloque ocupe TODO el ancho de la ventana */
+.full-bleed{
+  width:120vw;
+  margin-left:50%;
+  transform:translateX(-50%); /* centra el 100vw aunque esté dentro de un .container */
+  margin-top: 0%;
+}
+
+/* Quita gutters y paddings laterales dentro del bloque */
+.full-bleed .row{ --bs-gutter-x:0; }
+.full-bleed [class*="col-"]{ padding-left:0; padding-right:0; }
+
+/* (opcional) si dejaste padding en important-block, elimínalo aquí */
+.full-bleed .important-block{ padding-left:0; padding-right:0; }
+
+/* Evita el colapso de márgenes y elimina espacio inferior */
+.important-section{
+  display: flow-root;     /* o overflow:hidden */
+  margin-bottom: 0;       /* nada de margen abajo */
+  padding-bottom: 0;      /* por si acaso */
+}
+
+/* Asegura que el último bloque no aporte margen extra */
+.important-section .important-block:last-child{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Si tu footer/next section agrega espacio arriba, quítalo */
+footer, .site-footer, .next-section{
+  margin-top: 0;
+}
