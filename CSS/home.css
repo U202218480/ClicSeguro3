@@ -1,11 +1,12 @@
- header.app-section {
-    background-color: #cdcdcd40;
-    color: #137e88;
-    /*color: #fff;*/
-    padding: 45px 0;
-    line-height: normal;
-  }
-
+header.app-section {
+  background-color: #cdcdcd40;
+  color: #137e88;
+  padding-top: 100%;  /* 100 por el navbar + 45 original */
+  padding-bottom: 45px;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: normal;
+}
   .titulo-app-banner {
     font-family: 'Montserrat', sans-serif;
     color: #137e88;
@@ -28,29 +29,42 @@
     transform: scale(1.05);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
   }
+  
+.clic-main {
+   padding-top: 7% !important;
+ }
 
-  @media (max-width: 768px) {
-    .app-section img {
-      max-height: 75vh !important;
-      object-fit: contain;
-      margin-bottom: 20px;
-    }
+ @media (min-width: 770px) and (max-width: 990px) {
+   .clic-main {
+     padding-top: 15% !important;
+   }
+ }
 
-    h1 {
-      font-size: 1.5rem;
-      text-align: center;
-    }
+ @media (max-width: 768px) {   
 
-    .btn-animado {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  }
+   .app-section img {
+     max-height: 75vh !important;
+     object-fit: contain;
+     padding-top: 25% !important;
+   }
 
+   h1 {
+     font-size: 1.5rem;
+     text-align: center;
+   }
 
-  .text-uppercase {
-    text-transform: uppercase !important;
-  }
+   .btn-animado {
+     width: 100%;
+     margin-bottom: 20px;
+   }
+
+   img[src*="home_banner.webp"] {
+     margin: 0 !important;
+     display: block;
+     /* Elimina espacio debajo de imágenes inline */
+}
+}
+
 
   /*
 mark.bg-dark {
@@ -225,7 +239,7 @@ mark {
       margin: 0;
       /* el gap ya da el espacio */
       width: 100%;
-      padding: 12px 16px;
+      padding: 22px 16px;
       /* un poco más de área táctil */
       text-align: center;
       font-size: 0.95rem;
@@ -367,16 +381,16 @@ mark {
   margin-left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
-  padding: 30px 10px;
-   border-radius: 0 !important;
+  padding: 40px 16px;
+    border-radius: 0 !important;
 }
 
 /* ==== Fondo de cada bloque ==== */
 .block-a {
-  background-color: #c7e6ed;  /* azul claro */
+background-color: #91c7ced9; /* azul claro */
 }
 .block-b {
-  background-color: #079199;  /* turquesa */
+  background-color: #079199d4; /* turquesa */
 }
 
 /* ==== Contenedor flexible ==== */
@@ -385,7 +399,6 @@ mark {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  border: 0px;
 }
 .reverse-on-desktop {
   flex-direction: column;
@@ -552,11 +565,6 @@ html, body {
     border-radius: 12px;
   }
 
-  img[src*="home_banner.webp"] {
-  margin: 0 !important;
-  padding: 0 !important;
-  display: block; /* Elimina espacio debajo de imágenes inline */
-}
 
 
 #Riesgos {
