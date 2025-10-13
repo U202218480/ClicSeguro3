@@ -359,9 +359,21 @@ mark {
 
 
   /* ====== Important Section ====== */
-  .important-section {
-    width: 100%;
-  }
+ .important-section {
+  background-color: #00838f; /* color de fondo */
+  padding: 0;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+}
+
+/* Para eliminar bordes blancos en todos los tamaños */
+.full-bleed-auto {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
 
   /* Bloques con colores distintos y bordes rectos */
   .important-block {
@@ -469,16 +481,6 @@ mark {
     letter-spacing: .5px;
   }
 
-  /* opcional: más compacto en móvil */
-  @media (max-width:575.98px) {
-    .important-title {
-      padding: 12px 0;
-    }
-
-    .important-title h1 {
-      font-size: 1.5rem;
-    }
-  }
 
 
   .important-block.important-block.block-a {
@@ -491,14 +493,13 @@ mark {
     /* azul oscuro - cámbialo si quieres */
   }
 
-  /* Hace que el bloque ocupe TODO el ancho de la ventana */
-  .full-bleed {
-    width: 120vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    /* centra el 100vw aunque esté dentro de un .container */
-    margin-top: 0%;
-  }
+/* Hace que el bloque ocupe TODO el ancho de la ventana (sin sobresalir en móvil) */
+.full-bleed {
+  width: 111vw;             /* Usa 100% del ancho de la ventana */
+  margin-left: 50%;         /* Centra el bloque */
+  transform: translateX(-50%);  /* Asegura que esté centrado */
+  margin-top: 0;
+}
 
   /* Quita gutters y paddings laterales dentro del bloque */
   .full-bleed .row {
@@ -562,18 +563,24 @@ mark {
     display: block;
   }
 
-  /* “Tarjeta” para móvil: quitamos posiciones absolutas y apilamos */
-  @media (max-width: 575.98px) {
-    .artboard {
-      aspect-ratio: auto;
-    }
 
-    .el {
-      position: static !important;
-      width: 100% !important;
-      margin-bottom: 14px;
-    }
+@media (max-width:575.98px) {
+  .important-title {
+    padding: 10px 8px;   /* reduce padding superior/inferior y lateral */
+    width: 100%;         /* asegura que ocupe todo el ancho */
+    box-sizing: border-box; /* incluye padding dentro del ancho */
   }
+
+  .important-title h1 {
+    margin: 0;           /* elimina margen por defecto del h1 */
+    font-size: 1.4rem;   /* tamaño legible en móvil */
+    line-height: 1.2;    /* ajusta el interlineado */
+    text-align: center;  /* centrado */
+    word-break: break-word; /* evita que se salga el texto */
+  }
+}
+
+
 
   /* Suaviza las transiciones al cambiar de tab */
   .transition-tab {
@@ -596,4 +603,10 @@ mark {
 }
 #Ruta-denuncia {
   scroll-margin-top: 80px; /* Ajusta según el alto de tu header fijo */
+}
+
+
+/* Asegura que no haya márgenes que se “cuelen” arriba */
+html, body{ 
+  margin: 0; 
 }

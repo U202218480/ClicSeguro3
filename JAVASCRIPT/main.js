@@ -48,10 +48,12 @@ function cambiarIdioma(lang) {
 }
 
 // Inicializar AOS
-AOS.init({
-  duration: 1000,
-  once: true,
-});
+  AOS.init({
+    once: false,         // se repite cada vez que el elemento entra en pantalla
+    duration: 800,       // duración de animación
+    offset: 100,         // distancia desde el viewport
+    easing: 'ease-in-out'
+  });
 
 ScrollReveal().reveal(".sr-card", {
   origin: "bottom",
