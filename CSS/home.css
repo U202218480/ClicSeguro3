@@ -1,55 +1,58 @@
-  header.app-section {
-      background-color: #cdcdcd40;
-      color: #137e88;
-      /*color: #fff;*/
-      padding: 45px 0;
+ header.app-section {
+    background-color: #cdcdcd40;
+    color: #137e88;
+    /*color: #fff;*/
+    padding: 45px 0;
+    line-height: normal;
+  }
+
+  .titulo-app-banner {
+    font-family: 'Montserrat', sans-serif;
+    color: #137e88;
+    /*background-color: #137e88;*/
+    padding: 20px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .btn-animado {
+    background-color: #FF7043;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-animado:hover {
+    background-color: #f85929;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .app-section img {
+      max-height: 75vh !important;
+      object-fit: contain;
+      margin-bottom: 20px;
     }
 
-    .titulo-app-banner {
-      font-family: 'Montserrat', sans-serif;
-      color: #137e88;
-      /*background-color: #137e88;*/
-      padding: 20px;
-      border-radius: 10px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    h1 {
+      font-size: 1.5rem;
+      text-align: center;
     }
 
     .btn-animado {
-      background-color: #FF7043;
-      color: #fff;
-      border: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 100%;
+      margin-bottom: 20px;
     }
-
-    .btn-animado:hover {
-      background-color: #f85929;
-      transform: scale(1.05);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-    }
-
-    @media (max-width: 768px) {
-      .app-section img {
-        max-height: 75vh !important;
-        object-fit: contain;
-        margin-bottom: 20px;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-        text-align: center;
-      }
-
-      .btn-animado {
-        width: 100%;
-      }
-    }
+  }
 
 
-    .text-uppercase {
+  .text-uppercase {
     text-transform: uppercase !important;
-}
-/*
+  }
+
+  /*
 mark.bg-dark {
     --mark-color: var(--dark);
     background-color: transparent !important;
@@ -74,86 +77,118 @@ mark {
     color: inherit;
 }
 */
-/* Contenedor del bloque "Ruta de Denuncia" */
-/* === Split artboard (dos mitades que juntas forman una sola imagen) === */
-.split-board{
-  position: relative;
-  width: 100%;
-  max-width: 800px;     /* opcional */
-  aspect-ratio: 16/9;    /* ajusta a la proporción real de tus láminas */
-  margin-inline: auto;
-}
-
-.split-piece{
-  position: absolute;
-  top: 0; bottom: 0;
-  width: 50%;
-}
-.split-left{ left: 0; }
-.split-right{ right: 0; }
-
-/* Las mitades se escalan idénticas y ocupan todo su 50% */
-.split-piece > img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;  /* usa 'cover' si tus recortes son exactos sin márgenes */
-  display: block;
-}
-
-/* Quita cualquier gap del carrusel */
-.info-estadistica .carousel-item{ padding: 0; }
-
-/* --- MÓVIL: apilar en columna y con aire entre mitades --- */
-@media (max-width:575.98px){
-  .split-board{
-    aspect-ratio: auto;     /* altura se ajusta al contenido */
-  }
-  .split-piece{
-    position: static;
+  /* Contenedor del bloque "Ruta de Denuncia" */
+  /* === Split artboard (dos mitades que juntas forman una sola imagen) === */
+  .split-board {
+    position: relative;
     width: 100%;
-    height: auto;
-    margin-bottom: 12px;
+    max-width: 800px;
+    /* opcional */
+    aspect-ratio: 16/9;
+    /* ajusta a la proporción real de tus láminas */
+    margin-inline: auto;
   }
-  .split-piece > img{
-    height: auto;
+
+  .split-piece {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
   }
-}
 
-
-
-
-
-
-
-
-
-
-.container.text-center{
-  padding-top: 0px;      /* antes 24px+ en muchos temas */
-  padding-bottom: 8px;   /* reduce el espacio inferior */
-}
-
-/* Título y tabs con menos separación */
-#Ruta-denuncia h2{ margin-bottom: .75rem; }
-#Ruta-denuncia .nav{ margin-bottom: .75rem !important; }
-
-/* Quita “aire” extra del contenido del tab */
-#Ruta-denuncia .tab-pane{
-  padding: 8px 8px 0 !important;   /* si usas .p-3, esto lo sobreescribe */
-}
-
-/* Imágenes y artboard sin margen inferior extra */
-#Ruta-denuncia .artboard{ margin-bottom: 0; }
-#Ruta-denuncia img{ display:block; margin-bottom:0; }
-
-/* Opcional: en móvil aún más compacto */
-@media (max-width:575.98px){
-  #Ruta-denuncia .container.text-center{
-    padding-top: 6px;
-    padding-bottom: 6px;
+  .split-left {
+    left: 0;
   }
-  #Ruta-denuncia .tab-pane{ padding: 6px 6px 0 !important; }
-}
+
+  .split-right {
+    right: 0;
+  }
+
+  /* Las mitades se escalan idénticas y ocupan todo su 50% */
+  .split-piece>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* usa 'cover' si tus recortes son exactos sin márgenes */
+    display: block;
+  }
+
+  /* Quita cualquier gap del carrusel */
+  .info-estadistica .carousel-item {
+    padding: 0;
+  }
+
+  /* --- MÓVIL: apilar en columna y con aire entre mitades --- */
+  @media (max-width:575.98px) {
+    .split-board {
+      aspect-ratio: auto;
+      /* altura se ajusta al contenido */
+    }
+
+    .split-piece {
+      position: static;
+      width: 100%;
+      height: auto;
+      margin-bottom: 12px;
+    }
+
+    .split-piece>img {
+      height: auto;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  .container.text-center {
+    padding-top: 0px;
+    /* antes 24px+ en muchos temas */
+    padding-bottom: 8px;
+    /* reduce el espacio inferior */
+  }
+
+  /* Título y tabs con menos separación */
+  #Ruta-denuncia h2 {
+    margin-bottom: .75rem;
+  }
+
+  #Ruta-denuncia .nav {
+    margin-bottom: .75rem !important;
+  }
+
+  /* Quita “aire” extra del contenido del tab */
+  #Ruta-denuncia .tab-pane {
+    padding: 8px 8px 0 !important;
+    /* si usas .p-3, esto lo sobreescribe */
+  }
+
+  /* Imágenes y artboard sin margen inferior extra */
+  #Ruta-denuncia .artboard {
+    margin-bottom: 0;
+  }
+
+  #Ruta-denuncia img {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  /* Opcional: en móvil aún más compacto */
+  @media (max-width:575.98px) {
+    #Ruta-denuncia .container.text-center {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+
+    #Ruta-denuncia .tab-pane {
+      padding: 6px 6px 0 !important;
+    }
+  }
 
   .highlight {
 
@@ -162,34 +197,41 @@ mark {
     color: #222;
   }
 
-    /* Tabs personalizados */
-/* Estilo base (igual que ya tienes) */
-.nav-pills .nav-link{
-  background-color:#d3cbe3;
-  color:#222;
-  border-radius:30px;
-  margin:0 10px;
-  padding:10px 30px;
-  transition:all .3s ease;
-}
+  /* Tabs personalizados */
+  /* Estilo base (igual que ya tienes) */
+  .nav-pills .nav-link {
+    background-color: #d3cbe3;
+    color: #222;
+    border-radius: 30px;
+    margin: 0 10px;
+    padding: 10px 30px;
+    transition: all .3s ease;
+  }
 
-/* MOBILE: separa y ordena mejor */
-@media (max-width:575.98px){
-  /* usa grid de 2 columnas, con espacio entre botones */
-  .nav-pills{
-    display:grid;
-    grid-template-columns:1fr 1fr; /* cambia a 1fr si los quieres en una sola columna */
-    gap:14px;                      /* espacio entre botones */
-    justify-items:stretch;
+  /* MOBILE: separa y ordena mejor */
+  @media (max-width:575.98px) {
+
+    /* usa grid de 2 columnas, con espacio entre botones */
+    .nav-pills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      /* cambia a 1fr si los quieres en una sola columna */
+      gap: 14px;
+      /* espacio entre botones */
+      justify-items: stretch;
+    }
+
+    .nav-pills .nav-link {
+      margin: 0;
+      /* el gap ya da el espacio */
+      width: 100%;
+      padding: 12px 16px;
+      /* un poco más de área táctil */
+      text-align: center;
+      font-size: 0.95rem;
+    }
   }
-  .nav-pills .nav-link{
-    margin:0;            /* el gap ya da el espacio */
-    width:100%;
-    padding:12px 16px;   /* un poco más de área táctil */
-    text-align:center;
-    font-size:0.95rem;
-  }
-}
+
   .nav-pills .nav-link:hover {
     background-color: #B39DDB;
     color: #222;
@@ -207,6 +249,7 @@ mark {
     transform: translateX(30px) scale(0.98);
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
+
   .transition-tab.show.active {
     opacity: 1;
     transform: translateX(0) scale(1);
@@ -223,42 +266,42 @@ mark {
       max-height: 250px;
     }
   }
-  
 
-      .important-section img {
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 0.5rem;
+
+  .important-section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  .btn-custom {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .btn-custom:hover {
+    background-color: white;
+    color: #28a745;
+  }
+
+  @media (max-width: 768px) {
+    .important-section .row {
+      flex-direction: column !important;
     }
 
-    .btn-custom {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      border-radius: 0.5rem;
-      transition: background-color 0.3s, color 0.3s;
+    .important-section .col-md-6 {
+      margin-bottom: 1.5rem;
     }
-
-    .btn-custom:hover {
-      background-color: white;
-      color: #28a745;
-    }
-
-    @media (max-width: 768px) {
-      .important-section .row {
-        flex-direction: column !important;
-      }
-
-      .important-section .col-md-6 {
-        margin-bottom: 1.5rem;
-      }
-    }
+  }
 
 
-      /* Quitar padding al contenedor */
+  /* Quitar padding al contenedor */
   .info-estadistica .container-fluid {
     padding: 0 !important;
   }
@@ -285,6 +328,7 @@ mark {
     height: 12px;
     border-radius: 50%;
   }
+
   .carousel-indicators .active {
     background-color: #fff;
   }
@@ -294,14 +338,17 @@ mark {
     .impact-title {
       font-size: 2rem;
     }
+
     .info-estadistica .carousel-item {
       min-height: 350px;
     }
+
     .info-estadistica .col-md-6 img {
       max-height: 250px;
       object-fit: fill !important;
       padding: 0px 20px
     }
+
     .info-estadistica .col-md-6 p {
       font-size: 0.95rem;
     }
@@ -310,135 +357,243 @@ mark {
 
 
 
-  
-/* ====== Important Section ====== */
-.important-section{ width:100%; }
 
-/* Bloques con colores distintos y bordes rectos */
-.important-block{ padding: 32px 12px; }
-.block-a{ background:#91c7ce; }   /* azul claro — cámbialo si quieres */
-.block-b{ background:#00757E; }   /* durazno claro — cámbialo si quieres */
-
-/* Imágenes sin redondeo y fluidas */
-.important-section img{
-  display:block;
-  width:100%;
-  height:auto;
-  border-radius:0;
-}
-
-/* Icono más compacto, centrado */
-.img-icon{
-  max-width:380px;   /* ajusta al gusto */
-  margin-inline:auto;
-}
-
-/* Botón grande, táctil, con hover */
-.btn-cta{
-  border-radius:10;
-  padding:12px 28px;
-  font-weight:700;
-  letter-spacing:.4px;
-  background:#222;
-  color:#fff;
-  border:2px solid #222;
-  transition:transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
-}
-.btn-cta:hover,
-.btn-cta:focus-visible{
-  background:#ffffff;      /* <-- color hover */
-  color:#000000;              /* texto en hover */
-  border-color:#ffffff;    /* borde en hover */
-  transform:translateY(-1px);
-}
-
-/* ====== Responsive ====== */
-@media (max-width: 575.98px){
-  .important-block{ padding: 20px 14px; }
-
-  /* Asegura aire vertical entre columnas apiladas */
-  .important-block .row > [class*="col-"] + [class*="col-"]{
-    margin-top: 8px;
+  /* ====== Important Section ====== */
+  .important-section {
+    width: 100%;
   }
 
-  /* Botón a ancho automático pero cómodo */
-  .btn-cta{ padding:12px 22px; }
+  /* Bloques con colores distintos y bordes rectos */
+  .important-block {
+    padding: 32px 12px;
+  }
 
-  /* Icono un poco más pequeño para pantallas chicas */
-  .img-icon{ max-width: 72vw; }
-}
+  .block-a {
+    background: #91c7ce;
+  }
 
-/* Opcional: limitar el ancho máximo en desktop para que no “estiren” de más */
-@media (min-width: 992px){
-  .important-block .row{
-    max-width: 1200px;
+  /* azul claro — cámbialo si quieres */
+  .block-b {
+    background: #00757E;
+  }
+
+  /* durazno claro — cámbialo si quieres */
+
+  /* Imágenes sin redondeo y fluidas */
+  .important-section img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  /* Icono más compacto, centrado */
+  .img-icon {
+    max-width: 380px;
+    /* ajusta al gusto */
     margin-inline: auto;
   }
+
+  /* Botón grande, táctil, con hover */
+  .btn-cta {
+    border-radius: 10;
+    padding: 12px 28px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    background: #222;
+    color: #fff;
+    border: 2px solid #222;
+    transition: transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  }
+
+  .btn-cta:hover,
+  .btn-cta:focus-visible {
+    background: #ffffff;
+    /* <-- color hover */
+    color: #000000;
+    /* texto en hover */
+    border-color: #ffffff;
+    /* borde en hover */
+    transform: translateY(-1px);
+  }
+
+  /* ====== Responsive ====== */
+  @media (max-width: 575.98px) {
+    .important-block {
+      padding: 20px 14px;
+    }
+
+    /* Asegura aire vertical entre columnas apiladas */
+    .important-block .row>[class*="col-"]+[class*="col-"] {
+      margin-top: 8px;
+    }
+
+    /* Botón a ancho automático pero cómodo */
+    .btn-cta {
+      padding: 12px 22px;
+    }
+
+    /* Icono un poco más pequeño para pantallas chicas */
+    .img-icon {
+      max-width: 72vw;
+    }
+  }
+
+  /* Opcional: limitar el ancho máximo en desktop para que no “estiren” de más */
+  @media (min-width: 992px) {
+    .important-block .row {
+      max-width: 1200px;
+      margin-inline: auto;
+    }
+  }
+
+
+
+
+
+
+  /* Barra de título full-width (sin bordes redondeados) */
+  .important-title {
+    width: 100%;
+    padding: 16px 0;
+    /* alto de la franja */
+  }
+
+  .important-title h1 {
+    margin: 0;
+    text-align: center;
+    color: #c1121f;
+    /* color del texto */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+
+  /* opcional: más compacto en móvil */
+  @media (max-width:575.98px) {
+    .important-title {
+      padding: 12px 0;
+    }
+
+    .important-title h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+
+  .important-block.important-block.block-a {
+    background: #91c7cec4 !important;
+    /* azul oscuro - cámbialo si quieres */
+  }
+
+  .important-block.block-b {
+    background: #00757ec9 !important;
+    /* azul oscuro - cámbialo si quieres */
+  }
+
+  /* Hace que el bloque ocupe TODO el ancho de la ventana */
+  .full-bleed {
+    width: 120vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    /* centra el 100vw aunque esté dentro de un .container */
+    margin-top: 0%;
+  }
+
+  /* Quita gutters y paddings laterales dentro del bloque */
+  .full-bleed .row {
+    --bs-gutter-x: 0;
+  }
+
+  .full-bleed [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* (opcional) si dejaste padding en important-block, elimínalo aquí */
+  .full-bleed .important-block {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Evita el colapso de márgenes y elimina espacio inferior */
+  .important-section {
+    display: flow-root;
+    /* o overflow:hidden */
+    margin-bottom: 0;
+    /* nada de margen abajo */
+    padding-bottom: 0;
+    /* por si acaso */
+  }
+
+  /* Asegura que el último bloque no aporte margen extra */
+  .important-section .important-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* Si tu footer/next section agrega espacio arriba, quítalo */
+  footer,
+  .site-footer,
+  .next-section {
+    margin-top: 0;
+  }
+
+
+  /* Lienzo que conserva proporciones del arte y permite posicionar en % */
+  .artboard {
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+    /* ajusta si tu arte es más ancho */
+    aspect-ratio: var(--ratio, 990/637);
+    /* proporción aprox. de tus capturas */
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .el {
+    position: absolute;
+  }
+
+  .el>img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* “Tarjeta” para móvil: quitamos posiciones absolutas y apilamos */
+  @media (max-width: 575.98px) {
+    .artboard {
+      aspect-ratio: auto;
+    }
+
+    .el {
+      position: static !important;
+      width: 100% !important;
+      margin-bottom: 14px;
+    }
+  }
+
+  /* Suaviza las transiciones al cambiar de tab */
+  .transition-tab {
+    transition: opacity .25s ease;
+  }
+
+  .rounded-12 {
+    border-radius: 12px;
+  }
+
+  img[src*="home_banner.webp"] {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block; /* Elimina espacio debajo de imágenes inline */
 }
 
 
-
-
-
-
-/* Barra de título full-width (sin bordes redondeados) */
-.important-title{
-  width:100%;
-  padding:16px 0;         /* alto de la franja */
+#Riesgos {
+  scroll-margin-top: 80px; /* Ajusta según el alto de tu header fijo */
 }
-.important-title h1{
-  margin:0;
-  text-align:center;
-  color:#c1121f;          /* color del texto */
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.5px;
-}
-
-/* opcional: más compacto en móvil */
-@media (max-width:575.98px){
-  .important-title{ padding:12px 0; }
-  .important-title h1{ font-size:1.5rem; }
-}
-
-
-.important-block.important-block.block-a{
-
-  background:#91c7ce;  /* azul oscuro - cámbialo si quieres */
-}
-
-.important-block.block-b{
-  background:#00757E;  /* azul oscuro - cámbialo si quieres */
-}
-/* Hace que el bloque ocupe TODO el ancho de la ventana */
-.full-bleed{
-  width:120vw;
-  margin-left:50%;
-  transform:translateX(-50%); /* centra el 100vw aunque esté dentro de un .container */
-  margin-top: 0%;
-}
-
-/* Quita gutters y paddings laterales dentro del bloque */
-.full-bleed .row{ --bs-gutter-x:0; }
-.full-bleed [class*="col-"]{ padding-left:0; padding-right:0; }
-
-/* (opcional) si dejaste padding en important-block, elimínalo aquí */
-.full-bleed .important-block{ padding-left:0; padding-right:0; }
-
-/* Evita el colapso de márgenes y elimina espacio inferior */
-.important-section{
-  display: flow-root;     /* o overflow:hidden */
-  margin-bottom: 0;       /* nada de margen abajo */
-  padding-bottom: 0;      /* por si acaso */
-}
-
-/* Asegura que el último bloque no aporte margen extra */
-.important-section .important-block:last-child{
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-/* Si tu footer/next section agrega espacio arriba, quítalo */
-footer, .site-footer, .next-section{
-  margin-top: 0;
+#Ruta-denuncia {
+  scroll-margin-top: 80px; /* Ajusta según el alto de tu header fijo */
 }
