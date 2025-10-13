@@ -359,179 +359,140 @@ mark {
 
 
   /* ====== Important Section ====== */
- .important-section {
-  background-color: #00838f; /* color de fondo */
-  padding: 0;
-  margin: 0;
-  display: block;
-  overflow: hidden;
-}
-
-/* Para eliminar bordes blancos en todos los tamaños */
-.full-bleed-auto {
-  width: 100vw;
+/* ==== Estructura base ==== */
+/* ==== Sección Principal (100% ancho) ==== */
+/* ==== Sección general ==== */
+.important-section {
+  width: 100%;
   margin-left: 50%;
   transform: translateX(-50%);
+  overflow: hidden;
+  padding: 30px 10px;
+   border-radius: 0 !important;
 }
 
+/* ==== Fondo de cada bloque ==== */
+.block-a {
+  background-color: #c7e6ed;  /* azul claro */
+}
+.block-b {
+  background-color: #079199;  /* turquesa */
+}
 
-  /* Bloques con colores distintos y bordes rectos */
-  .important-block {
-    padding: 32px 12px;
+/* ==== Contenedor flexible ==== */
+.important-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border: 0px;
+}
+.reverse-on-desktop {
+  flex-direction: column;
+}
+
+/* ==== Imagen principal ==== */
+.important-image img {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ==== Contenido: ícono + botón ==== */
+.important-content {
+  display: flex;
+  flex-direction: column;
+    max-width: 620px;
+  align-items: center;
+  text-align: center;
+}
+.important-icon {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+}
+
+/* ==== Botón ==== */
+.btn-cta {
+  border-radius: 0;
+  padding: 12px 28px;
+  font-weight: 700;
+  background: #222;
+  color: #fff;
+  border: 2px solid #222;
+  transition: all 0.2s ease;
+}
+.btn-cta:hover,
+.btn-cta:focus-visible {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+  transform: translateY(-1px);
+}
+
+/* ==== Escritorio ==== */
+@media (min-width: 768px) {
+  .important-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 48px 80px;
+    gap: 48px;
   }
-
-  .block-a {
-    background: #91c7ce;
+  .reverse-on-desktop {
+    flex-direction: row-reverse;
   }
-
-  /* azul claro — cámbialo si quieres */
-  .block-b {
-    background: #00757E;
-  }
-
-  /* durazno claro — cámbialo si quieres */
-
-  /* Imágenes sin redondeo y fluidas */
-  .important-section img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 0;
-  }
-
-  /* Icono más compacto, centrado */
-  .img-icon {
-    max-width: 380px;
-    /* ajusta al gusto */
-    margin-inline: auto;
-  }
-
-  /* Botón grande, táctil, con hover */
-  .btn-cta {
-    border-radius: 10;
-    padding: 12px 28px;
-    font-weight: 700;
-    letter-spacing: .4px;
-    background: #222;
-    color: #fff;
-    border: 2px solid #222;
-    transition: transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
-  }
-
-  .btn-cta:hover,
-  .btn-cta:focus-visible {
-    background: #ffffff;
-    /* <-- color hover */
-    color: #000000;
-    /* texto en hover */
-    border-color: #ffffff;
-    /* borde en hover */
-    transform: translateY(-1px);
-  }
-
-  /* ====== Responsive ====== */
-  @media (max-width: 575.98px) {
-    .important-block {
-      padding: 20px 14px;
-    }
-
-    /* Asegura aire vertical entre columnas apiladas */
-    .important-block .row>[class*="col-"]+[class*="col-"] {
-      margin-top: 8px;
-    }
-
-    /* Botón a ancho automático pero cómodo */
-    .btn-cta {
-      padding: 12px 22px;
-    }
-
-    /* Icono un poco más pequeño para pantallas chicas */
-    .img-icon {
-      max-width: 72vw;
-    }
-  }
-
-  /* Opcional: limitar el ancho máximo en desktop para que no “estiren” de más */
-  @media (min-width: 992px) {
-    .important-block .row {
-      max-width: 1200px;
-      margin-inline: auto;
-    }
-  }
-
-
-
-
-
-
-  /* Barra de título full-width (sin bordes redondeados) */
-  .important-title {
-    width: 100%;
-    padding: 16px 0;
-    /* alto de la franja */
-  }
-
-  .important-title h1 {
-    margin: 0;
+  .important-content {
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: #c1121f;
-    /* color del texto */
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: .5px;
   }
-
-
-
-  .important-block.important-block.block-a {
-    background: #91c7cec4 !important;
-    /* azul oscuro - cámbialo si quieres */
+  .important-icon {
+    max-width: 200px;
   }
-
-  .important-block.block-b {
-    background: #00757ec9 !important;
-    /* azul oscuro - cámbialo si quieres */
-  }
-
-/* Hace que el bloque ocupe TODO el ancho de la ventana (sin sobresalir en móvil) */
-.full-bleed {
-  width: 111vw;             /* Usa 100% del ancho de la ventana */
-  margin-left: 50%;         /* Centra el bloque */
-  transform: translateX(-50%);  /* Asegura que esté centrado */
-  margin-top: 0;
 }
 
-  /* Quita gutters y paddings laterales dentro del bloque */
-  .full-bleed .row {
-    --bs-gutter-x: 0;
+/* ==== Móvil ==== */
+@media (max-width: 575.98px) {
+  .important-container {
+    padding: 24px 16px;
   }
+  .important-icon {
+    max-width: 160px;
+  }
+  .btn-cta {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+  .important-image img {
+    max-width: 300px;
+  }
+}
 
-  .full-bleed [class*="col-"] {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
-  /* (opcional) si dejaste padding en important-block, elimínalo aquí */
-  .full-bleed .important-block {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
-  /* Evita el colapso de márgenes y elimina espacio inferior */
-  .important-section {
-    display: flow-root;
-    /* o overflow:hidden */
-    margin-bottom: 0;
-    /* nada de margen abajo */
-    padding-bottom: 0;
-    /* por si acaso */
-  }
 
-  /* Asegura que el último bloque no aporte margen extra */
-  .important-section .important-block:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
+
+
+
+
+
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+  
 
   /* Si tu footer/next section agrega espacio arriba, quítalo */
   footer,
