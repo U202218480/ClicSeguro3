@@ -30,40 +30,49 @@ header.app-section {
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
   }
   
-.clic-main {
-   padding-top: 7% !important;
- }
-
- @media (min-width: 770px) and (max-width: 990px) {
+/* Asegura el espacio superior adecuado y evita que el contenido quede debajo del navbar */
+.clic-main { 
+   padding-top: 110px !important; /* Ajusta según la altura de tu navbar */
+}
+@media (min-width: 990px) and (max-width: 1125px) {
    .clic-main {
-     padding-top: 15% !important;
+     padding-top: 160px !important; /* Ajuste específico para pantallas medianas */
    }
- }
+}
 
- @media (max-width: 768px) {   
+@media (min-width: 770px) and (max-width: 990px) {
+   .clic-main {
+     padding-top: 130px !important; /* Ajuste específico para pantallas medianas */
+   }
+}
 
+@media (max-width: 768px) {   
+   /* Ajustes para la imagen y contenedor */
    .app-section img {
-     max-height: 75vh !important;
-     object-fit: contain;
-     padding-top: 25% !important;
+     max-height: 75vh !important;  /* Asegura que la imagen no sea más alta que el 75% de la pantalla */
+     object-fit: contain;          /* Muestra la imagen completa sin recortarla */
+     width: 100%;                  /* Asegura que la imagen ocupe todo el ancho disponible */
    }
 
+   /* Ajustes a los títulos */
    h1 {
      font-size: 1.5rem;
      text-align: center;
    }
 
+   /* Ajustes al botón para pantallas móviles */
    .btn-animado {
      width: 100%;
      margin-bottom: 20px;
    }
 
+   /* Elimina el espacio debajo de la imagen */
    img[src*="home_banner.webp"] {
      margin: 0 !important;
      display: block;
-     /* Elimina espacio debajo de imágenes inline */
+   }
 }
-}
+
 
 
   /*
@@ -132,24 +141,26 @@ mark {
     padding: 0;
   }
 
-  /* --- MÓVIL: apilar en columna y con aire entre mitades --- */
-  @media (max-width:575.98px) {
-    .split-board {
-      aspect-ratio: auto;
-      /* altura se ajusta al contenido */
-    }
-
-    .split-piece {
-      position: static;
-      width: 100%;
-      height: auto;
-      margin-bottom: 12px;
-    }
-
-    .split-piece>img {
-      height: auto;
-    }
+/* --- MÓVIL: apilar en columna y con aire entre mitades --- */
+@media (max-width: 575.98px) {
+  .split-board {
+    aspect-ratio: 300px;
+    /* altura se ajusta al contenido */
   }
+
+  .split-piece {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+  }
+
+  .split-piece > img {
+    width: 60%;  /* Reducción de la imagen a 80% del ancho disponible */
+    height: auto;
+    margin: 0 auto;  /* Asegura que la imagen esté centrada */
+  }
+}
 
 
 
