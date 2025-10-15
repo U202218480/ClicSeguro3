@@ -43,10 +43,15 @@ header.app-section {
   }
 }
 
-@media (max-width: 768px) {   
+@media (max-width: 768px) { 
+  .app-section {
+    padding-top: 20px !important; /* Ajusta el padding superior para móviles */
+    padding-bottom: 0px !important; /* Ajusta el padding inferior para móviles */
+    text-align: center;
+   } /* Centra el texto en móviles */ 
    /* Ajustes para la imagen y contenedor */
    /* Ajustes a los títulos */
-   h1 {
+   h3.fuentehome {
      font-size: 1.5rem;
      text-align: center;
    }
@@ -60,7 +65,8 @@ header.app-section {
     display: none; /* Ocultar la imagen para móvil en escritorio */
         max-height: 75vh !important;  /* Asegura que la imagen no sea más alta que el 75% de la pantalla */
      object-fit: contain;          /* Muestra la imagen completa sin recortarla */
-     width: 100%; 
+     width: 100%;
+     padding-top: 35px !important; 
   }
 
 }
