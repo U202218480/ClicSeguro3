@@ -375,82 +375,35 @@ mark {
 
 
 
-  /* ====== Important Section ====== */
-/* ==== Estructura base ==== */
-/* ==== Sección Principal (100% ancho) ==== */
-/* ==== Sección general ==== */
-.important-section { 
-  width: 100%;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  overflow: hidden;
-  padding: 40px 16px;
-  border-radius: 0 !important;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-}
-
-/* Fondo de cada bloque */
-.block-a {
+.configuracion-section {
   background-color: #91c7ced9; /* Azul claro */
-}
-.block-b {
-  background-color: #079199d4; /* Turquesa */
-}
+            padding-bottom: 0% !important;
+    padding: 50px 0;
+  }
 
-/* Contenedor flexible para asegurar que las imágenes y el contenido estén centrados */
-.important-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Asegura que el contenido esté centrado verticalmente */
-  gap: 24px;
-}
+  .configuracion-container {
+    padding-bottom: 0% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
-.reverse-on-desktop {
-  flex-direction: column;
-}
-
-.important-image {
-  display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  align-items: center;     /* Centra la imagen verticalmente */
-  width: 100%;
-}
-
-
-.important-image img {
-  width: 100%;
-  max-width: 620px;        /* Limita el tamaño máximo de la imagen */
-  height: auto;            /* Mantiene la proporción de la imagen */
-  object-fit: contain;     /* No recorta la imagen */
-  display: block;
-  margin: 0 auto;          /* Centra la imagen */
-}
-
-/* Contenido: ícono + botón */
-.important-content {
+  .configuracion-content {
+    text-align: center;
+    max-width: 500px;
     width: 100%;
-  max-width: 520px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  align-items: center;     /* Centra la imagen verticalmente */
-  align-items: center;
-  text-align: center;
-  max-width: 620px;
-  margin: 0 auto; 
-}
+        flex: 1;
+    padding-bottom: 0% !important;
+  }
 
-.important-icon {
-  max-width: 240px;
-  width: 100%;
-  height: auto;
-  padding-bottom: 5px !important;
-}
+  .configuracion-image {
+    flex: 1;
+    max-width: 550px;
+  }
 
-/* Botón */
-.btn-cta {
+  .btn-cta {
   border-radius: 0;
   padding: 12px 28px;
   font-weight: 700;
@@ -461,46 +414,108 @@ mark {
     padding-bottom: 5px !important;
 }
 
-.btn-cta:hover,
-.btn-cta:focus-visible {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: #000000;
-  transform: translateY(-1px);
+/* Ajustes para dispositivos móviles */
+@media (max-width: 575.98px) {
+  .configuracion-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .configuracion-content {
+    max-width: 90%;
+    margin-bottom: 20px;
+    order: 1; /* El contenido (texto y botón) aparece primero */
+  }
+
+  .btn-cta {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .configuracion-image {
+    order: 2; /* La imagen aparece después */
+  }
+
+  .configuracion img {
+    max-width: 250px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.auto-evaluation-section {
+        background-color: #079199d4; /* Turquesa */
+            padding-bottom: 0% !important;
+    padding: 50px 0;
+  }
+
+  .auto-evaluation-container {
+    padding-bottom: 0% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .auto-evaluation-content {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+        flex: 1;
+    padding-bottom: 0% !important;
+  }
+
+  .auto-evaluation-image {
+    flex: 1;
+    max-width: 550px;
+  }
+
+  .btn-cta {
+  border-radius: 0;
+  padding: 12px 28px;
+  font-weight: 700;
+  background: #222;
+  color: #fff;
+  border: 2px solid #222;
+  transition: all 0.2s ease;
     padding-bottom: 5px !important;
 }
 
-/* Ajustes para dispositivos de escritorio */
-@media (min-width: 768px) {
-  .important-container {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 48px 80px;
-    gap: 48px;
-  }
-  .reverse-on-desktop {
-    flex-direction: row-reverse;
-  }
-}
+  /* Ajustes para dispositivos móviles */
+  @media (max-width: 575.98px) {
+    .auto-evaluation-container {
+      flex-direction: column;
+      align-items: center;
+    }
 
-/* Ajustes para dispositivos móviles */
-@media (max-width: 575.98px) {
-  .important-container {
-    padding: 24px 16px;
-  }
-  .important-icon {
-    max-width: 160px;
-  }
-  .btn-cta {
-    font-size: 1rem;
-    padding: 10px 24px;
-    padding-bottom: 10px !important;
-  }
-  .important-image img {
-    max-width: 300px;  /* Limita el tamaño de la imagen en pantallas pequeñas */
-  }
-}
+    .auto-evaluation-content {
+      max-width: 90%;
+      margin-bottom: 20px;
+    }
 
+    .auto-evaluation-image img {
+      max-width: 250px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .btn-cta {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
 
 
 
