@@ -409,14 +409,7 @@ footer ul li a:hover {
     border-radius: 50%;
 }
 
-/*
-.card i {
-  transition: transform 0.3s ease;
-}
-.card:hover i {
-  transform: scale(1.2);
-}
-*/
+
 /* ---- ¡MUY IMPORTANTE! (desktop compacto) ---- */
 @media (min-width: 992px){
   .important-section .container{
@@ -561,11 +554,7 @@ footer ul li a:hover {
     transform: scale(0.98);
 }
 
-/*
-.carousel-item p.txt-carrousel{
-  min-height: 60px;
-}
-*/
+
 
 .card.hover-effect {
     transition: all 0.3s ease;

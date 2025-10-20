@@ -73,31 +73,6 @@ header.app-section {
 
 
 
-  /*
-mark.bg-dark {
-    --mark-color: var(--dark);
-    background-color: transparent !important;
-}
-.bg-dark {
-    background-color: var(--dark) !important;
-}
-mark {
-    --mark-color: var(--light);
-    --mark-skew: 0.25em;
-    --mark-height: 1.35em;
-    --mark-overlap: 0.6em;
-    padding-inline: var(--mark-overlap);
-    margin-inline: calc(var(--mark-overlap) * -1);
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    background-color: transparent;
-    background-image: linear-gradient( to bottom right, transparent 50%, var(--mark-color) 50% ), linear-gradient( to right, var(--mark-color), var(--mark-color) ), linear-gradient( to top left, transparent 50%, var(--mark-color) 50% );
-    background-size: var(--mark-skew) var(--mark-height), calc(100% - var(--mark-skew) * 2 + 1px) var(--mark-height), var(--mark-skew) var(--mark-height);
-    background-position: 0 50%, 50% 50%, 100% 50%;
-    background-repeat: no-repeat;
-    color: inherit;
-}
-*/
   /* Contenedor del bloque "Ruta de Denuncia" */
   /* === Split artboard (dos mitades que juntas forman una sola imagen) === */
 .split-board {
