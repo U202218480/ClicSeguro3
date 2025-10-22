@@ -35,17 +35,17 @@ function showThanks() {
     // Cambiar los estilos y los mensajes dependiendo del número de respuestas "Sí"
     if (yesCount >= 11 && yesCount <= 16) {
         overlay.classList.add('red-overlay');
-        riskImage.src = "Iconos e imagenes/rojo.webp";
+        riskImage.src = "Imagenes/rojo.webp";
         riskLevel.innerHTML = "Riesgo Alto";  // Mensaje de riesgo alto
         riskMessage.innerHTML = "Tu situación presenta un alto riesgo. Has recibido mensajes inapropiados o manipulativos que podrían ser un intento de grooming. Te recomendamos pedir ayuda y responder el cuestionario adicional.";
     } else if (yesCount >= 6 && yesCount <= 10) {
         overlay.classList.add('yellow-overlay');
-        riskImage.src = "Iconos e imagenes/ambar.webp";
+        riskImage.src = "Imagenes/ambar.webp";
         riskLevel.innerHTML = "Riesgo Moderado";  // Mensaje de riesgo moderado
         riskMessage.innerHTML = "Precaución. Considera tomar medidas. Es posible que tu situación necesite atención.";
     } else if (yesCount <= 5) {
         overlay.classList.add('green-overlay');
-        riskImage.src = "Iconos e imagenes/verde1.webp";
+        riskImage.src = "Imagenes/verde1.webp";
         riskLevel.innerHTML = "Riesgo Bajo";  // Mensaje de riesgo bajo
         riskMessage.innerHTML = "¡Bien! Estás tomando buenas decisiones. Sigue así.";
     }
@@ -126,10 +126,4 @@ AOS.init({
   once: true
 });
 
-ScrollReveal().reveal('.sr-card', {
-  origin: 'bottom',
-  distance: '40px',
-  duration: 800,
-  interval: 150,
-  reset: false
-});
+
